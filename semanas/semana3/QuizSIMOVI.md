@@ -200,7 +200,7 @@ La idea es que los usuarios tengan información en tiempo real para saber si lle
 
 ---
 
-### ¿Cómo se capturan los datos de un bus?
+### ¿Cómo se capturan los datos de un bus? Apartado de preguntas en la clase
 
 - Se mencionó la posibilidad de usar los **validadores** de los buses, ya que tienen GPS incorporado.
 - También se plantea que los **cobradores** podrían tener un papel clave en el sistema.
