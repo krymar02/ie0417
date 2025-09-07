@@ -1,0 +1,9 @@
+<map id="human.Human" name="human.Human">
+<area shape="rect" id="Node000001" title="A class which represents a human." alt="" coords="83,79,202,104"/>
+<area shape="rect" id="Node000003" href="$classstudent_1_1Student.html" title="A class representing a student derived from the human class." alt="" coords="5,152,131,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,115,82,154,78,150,119,111"/>
+<area shape="rect" id="Node000004" href="$classteacher_1_1Teacher.html" title="A class representing a teacher derived from the human class." alt="" coords="155,152,279,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,111,207,150,203,154,163,115"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="111,5,174,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,44,145,79,140,79,140,44"/>
+</map>
