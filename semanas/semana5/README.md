@@ -3,7 +3,6 @@
 
 ## Tema: Casos de uso y requerimientos de software  
 
----
 
 ## ¿Por qué necesitamos modelar requerimientos?
 
@@ -19,7 +18,12 @@ Problemas típicos cuando no se modelan bien los requerimientos:
 - **Cambios descontrolados**: requisitos que se modifican sin seguimiento.
 
  *“¿Diseñarías un edificio sin planos? El software también necesita una base sólida antes de escribir una sola línea de código.”*  
-
+---
+## Notas 
+- Modelar equerimientos es necesario por si el proyecto rota a alguien más, ya que hay varios programadores. 
+- si no hay una guia definida de lo que se quiere lograr habrá errores.
+- Gap Analysis (Analisis de brecha) ----> Comparo, se saca la brecha y se compara.
+- Hay personas que solo se dedican a eso, a realizar modelar requerimientos (tratar con el cliente).
 ---
 
 ## Tipos de requerimientos de software
@@ -36,6 +40,13 @@ Ejemplos:
 - El sistema debe estar disponible el **99.9% del tiempo**.
 - Seguridad, rendimiento, usabilidad, mantenibilidad.
 
+---
+## Notas 
+- En los funcionales y no funcionales se trata de que se hace y como se hace.
+- Funcional por ejemplo un boton que queremos siempre a la izquierda en cualquier página y que diga x cosa.
+- Uno no funcional el tiempo de respuesta de ese botón.
+---
+
 ### Requerimientos técnicos
 - Restricciones sobre arquitectura o tecnologías.
 - Ejemplo: “Debe desarrollarse usando Django y PostgreSQL.”
@@ -48,6 +59,11 @@ Ejemplos:
 - Propios de la industria o entorno específico.
 - Ejemplo: “Los intereses se deben calcular según el reglamento financiero X.”
 
+---
+## Notas 
+- Ejemplo tecnico, quiero que la app me pida usuario y contraseña.
+- Netfix usa micro servicios.
+  
 ---
 
 ## Ciclo de vida de los requerimientos
@@ -70,9 +86,17 @@ Ejemplos:
 
 5. **Gestión de cambios**  
    - Control del impacto de requisitos nuevos o modificados.  
-   - Herramientas: Git, JIRA, Trello, Azure DevOps.  
-
+   - Herramientas: Git, JIRA, Trello, Azure DevOps.
+     
 ---
+## Notas 
+- "Stake holder" ---> interesados en el proyecto
+- Elicitacion ---> se emtrevista a la persona para saber que necesita o que ocupa que se cubra en el requerimiento.
+- certificacion basada en testing ---> ISTQB ---->  quie es verificar, probar, testear, error inminente.
+- MVP ---> producto minimo viable.
+- Huli ----> app para buscar especialistas medicos.
+---
+
 
 ## Técnicas de elicitud de requerimientos
 
@@ -83,22 +107,22 @@ Ejemplos:
 - **Prototipos o mockups**.  
 - **Análisis de documentos existentes**.  
 
-👉 Lo mejor es usar **múltiples técnicas en combinación**.  
+Lo mejor es usar **múltiples técnicas en combinación**.  
 
----
 
 ## Redacción efectiva de requerimientos
 
 Un buen requerimiento debe ser:  
-✔ Correcto  
-✔ Claro  
-✔ Completo  
-✔ Consistente  
-✔ Verificable  
-✔ Rastreable  
+✔ Correcto: refleja una necesidad real.
+✔ Claro: sin ambigüedades ni interpretaciones múltiples.
+✔ Completo: contiene toda la información necesaria.
+✔ Consistente: no entra en conflicto con otros requisitos.
+✔ Verificable: se puede probar o demostrar su cumplimiento.
+✔ Rastreable: puede relacionarse con objetivos, código o pruebas.
 
-❌ Mal redactado: *“El sistema debe ser rápido.”*  
-✅ Bien redactado: *“El sistema debe responder a las consultas en menos de 2 segundos en el 95% de los casos.”*  
+
+ Mal redactado: *“El sistema debe ser rápido.”*  
+ Bien redactado: *“El sistema debe responder a las consultas en menos de 2 segundos en el 95% de los casos.”*  
 
 Consejos:
 - Usar verbos claros: *debe permitir, debe procesar, debe mostrar*.  
@@ -118,7 +142,12 @@ Consejos:
 - Caso de uso  
 - Escenario principal  
 - Flujos alternativos  
-- Precondiciones y postcondiciones  
+- Precondiciones y postcondiciones
+---
+## Notas 
+- Use cases Una técnica para describir cómo los usuarios interactúan con el sistema para lograr un **objetivo específico**. En funcionales.
+---
+
 
 ### Ejemplo: Registrar nuevo usuario
 **Actor:** Usuario  
@@ -163,6 +192,8 @@ Consejos:
 ---
 
 ## Actividad práctica en grupos
+
+- grupos de 3 Labratorio 5.2
 
 **Escenarios posibles:**
 - Sistema de inscripción a cursos  
