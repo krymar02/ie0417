@@ -205,8 +205,8 @@ Todas las operaciones de inscripción/retiro quedan registradas con timestamp y 
 ---
 
 ## C. Diagrama UML  
-
-*(Pendiente — debe incluir al menos 1 relación «include», 1 relación «extend» y 1 generalización)*  
+- Diagrama con relación «include», relación «extend» y generalización.
+![Diagrama UML](./diagrama.jpeg)  
 
 ---
 
