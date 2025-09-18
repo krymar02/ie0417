@@ -63,8 +63,7 @@ La **programación orientada a objetos (OOP)** es un paradigma de programación 
 ## Ejemplo 1 — `Class.cpp`  
 
 ### Código  
-![Código Ejemplo 1](ie0417/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
 
 ### Salida  
-![Salida Ejemplo 1](ie0417/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
-
+![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
