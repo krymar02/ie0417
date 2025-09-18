@@ -65,20 +65,20 @@ La **programación orientada a objetos (OOP)** es un paradigma de programación 
 - Se realizó un ejercicio con la misma base del ejemplo anterior pero ejecutado diferente, para mostrar la base y altura, se cambio la parte de instancia y se le asignaron valores al objeto utilizado.
 
  ### Código  
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE2Boilerplate.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE2Boilerplate.png)  
 
-## Ejemplo 4 — `Relacionado a la explicacion de Constructor y Destructor`
+## Ejemplo 3 — `Relacionado a la explicacion de Constructor y Destructor`
 
 - Se explica un ejemplo para ver como funciona el constructor y destructor, en el video se realiza primero una impresion en la parte del constructor y otra en la parte del destructor. El destructor importa porque sirve para limpiar todo, se encarga de cerrar las puertas que dejamos abiertas.
 
  ### Código  
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 3](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE3ConstruDestru.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 3](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE3ConstruDestru.png)  
 
 ## Ejemplo 4 — `Relacionado a Tipos de acceso en clases`
 
@@ -96,45 +96,45 @@ derivadas pueden acceder a ellos.
   - Hay una clase llamada animal que contiene 2 metodos y son de tipo publicos, cualquiera puede accederlos, al contrario de los privados que no se pueden acceder. Respecto al protegido no puedo usarlos si se encuentran protegidos, es decir en esa parte puedo usar uno que sea publico. Dentro de la clase se puede acceder a todo.  
 
  ### Código  
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 4](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE4Animal.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 4](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE4Animal.png)  
 
 ## Ejemplo 5 — `¿ Se pueden pasar objetos como párametros a funcioines ?`
 - Si se puede hacer, se explica mediante el ejemplo, tambien se le pueden pasar objetos. La funcion calcular promedio recibe 2 parametros, en este caso el promedio. Los objetos son Student 1 y Student 2.
 
  ### Código  
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 5](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE5ObPara.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 5](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE5ObPara.png)  
 
 ## Ejemplo 6 — `¿ Y retornar objetos ?`
 
 - En este ejemplo se muestra que si se pueden retornar ejemplos, como una string, un entero o un flotante. 
 
  ### Código  
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 6](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE6RetornarO.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 6](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE6RetornarO.png)  
 
 ## Ejemplo 7 — `Retorno de objetos con archivos separados.`
 
 - Se realiza otro ejemplo para retornar objetos pero de manera bonita, con archivos separados, se tiene persona.hpp, persona.cpp y su main.cpp . En el .hpp esta el constructor y se muestran las declaraciones, los metodos publicos y los argumentos que se reciben. En el .cpp va la implementacion, el constructor con la clase. En main se llama lo que se va a ejecutar, los metodos se encuentran presentes. De esa manera se separan archivos. 
 
  ### Archivo de persona.cpp 
-![Código de persona.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código de persona.cpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE7personacpp.png)  
 
  ### Archivo de persona.hpp  
-![Código de persona.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código de persona.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE7personahpp.png)  
 
  ### Archivo de main.cpp 
-![Código de persona.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código de main.cpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE7mainpersona.png)  
 
 ### Salida  
-![Salida Ejemplo 7](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png) 
+![Salida Ejemplo 7](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE7persona.png) 
 
 ## Ejemplo 8 — `Ejercicio convertir un archivo en una implementación con headers para funciones y clases.`
 
@@ -142,36 +142,36 @@ derivadas pueden acceder a ellos.
 
 
  ### Archivo del ejemplo inicial codigo y salida 
-![Código y Salida del ejercicio.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código y Salida del ejercicio.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE8ejercicio.png  
 
 ### Archivo de Student.h
-![Código de persona.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código de student.h](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE8Studenth.png)  
 
 ### Archivo de Student.cpp
-![Código de persona.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código de student.cpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE8Studencpp.png)  
 
 ### Archivo de Functions.h
-![Código de persona.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código de functions.h](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE8Functionsh.png)  
 
 
 ### Archivo de Functions.cpp 
-![Código de persona.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código de Functions.cpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE8Functionscpp.png)  
 
 ### Archivo de main.cpp 
-![Código de persona.hpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código de main.cpp](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE8maincpp.png)  
 
 ### Salida  
-![Salida Ejemplo 7](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png) 
+![Salida Ejemplo 8](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE8ejerciciomain.png) 
 
 ## Ejemplo 9  — `Sobrecarga de operadores.`
 - La sobrecarga de operadores en C++ es una característica de la programación orientada a objetos que permite a los desarrolladores definir el comportamiento de los operadores del lenguaje para trabajar con objetos de una clase personalizada. Esto significa que los operadores como +, -, *, /, entre otros, pueden ser utilizados con objetos de una clase personalizada, y los resultados de estas operaciones pueden ser definidos por quien programa.
 - En este ejemplo se muestra como se sobrecargan los operadores, por ejemplo con las fracciones
 
  ### Código  
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 9](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE9Sobrecarga.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 9](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE9Sobrecarga.png)  
 
 ## Ejemplo 10  — `Herencia`
 - La herencia es una de las características clave de la programación orientada a objetos en C++. Nos permite crear una nueva clase (clase
@@ -179,27 +179,27 @@ derivada) a partir de una clase existente (clase base). La clase derivada hereda
 - El ejemplo de esta parte corresponde a la herencia, tiene una clase animal y se hereda el contenido de la clase base.
 
  ### Código  
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 10](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE10Herencia.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 10](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE10Herencia.png)  
 
 ## Ejemplo 11 — `Sobreescritura de funciones en la herencia`
 - Este ejemplo habla sobre como sobreescribir funciones en la herencia, de la clase base.
 
  ### Código  
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 11](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE11Sobreescritura.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 11](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE11Sobreescritura.png)  
 
 ## Ejemplo 12 — `Miembros protegidos`
 
  ### Código  
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 12](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE12Miembros.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 12](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE12Miembros.png)  
 
 ## Ejemplo 13 — `Modos de acceso al realizar herencia en C++`
 
@@ -214,43 +214,43 @@ derivada) a partir de una clase existente (clase base). La clase derivada hereda
 - Para ejemplificar esta parte se agregan 3 ejemplos.
 
 ### Código Ejemplo 1 Class A
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 13.1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE13ClassA.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 13.1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE13ClassA.png)  
 
 ### Código Ejemplo 2 Class Mamma
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 13.2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE13ClassMamma.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 13.2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE13ClassMamma.png)  
 
 ### Código Ejemplo 3 Class Animal
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 13.3](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE13ClassAnimal.png)  
 
 ### Salida  
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 13.3](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE13ClassAnimal.png)  
 
 ## Ejemplo 14 — `Funciones y clases amigas`
 - La ocultacion de datos es un concepto fundamental de la programacion orientada a objetos. Restringe el acceso de miembros privados desde fuera de la clase. Del mismo modo, solo las clases derivadas pueden acceder a los miembros protegidos y no se puede acceder a ellos desde el exterior.
 
-### Código ejemplo 1
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+### Código ejemplo 1 Clases amigas
+![Código Ejemplo 14.1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE14FCamigas.png)  
 
 ### Salida 
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 14.2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE14FCamigas.png)  
 
-### Código ejemplo 2
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+### Código ejemplo 2 Clases amigas 2
+![Código Ejemplo 14.2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE14FCamigas2.png)  
 
 ### Salida 
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 14.3](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE14FCamigas2.png)  
 
 ## Ejemplo 15 — `Funciones virtuales`
 - Una función virtual es una función miembro en la clase base que esperamos redefinir en clases derivadas. Básicamente, se usa unafunción virtual en la clase base para garantizar que la función se invalide. Esto se aplica especialmente a los casos en los que un puntero de la clase base apunta a un objeto de una clase derivada.
 - 
 ### Código ejemplo 
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE1Class.png)  
+![Código Ejemplo 15](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
 
 ### Salida 
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE1Class.png)  
+![Salida Ejemplo 15](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png)  
