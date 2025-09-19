@@ -302,26 +302,26 @@ métodos para crear nueva información sobre ese objeto.
 - El ejemplo que se construyó es acerca de como crear una clase en python, atributos y variables. 
 
 ### Código 
-![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE1Clases.png)  
 
 ### Salida 
-![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png)  
+![Salida Ejemplo 1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE1Clases.png)  
 
 ## Ejemplo 2 — `Objetos`
 
 ### Código
-![Código Ejemplo 2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE2Objetos.png)  
 
 ### Salida 
-![Salida Ejemplo 2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE2Objetos.png) 
 
 ## Ejemplo 3 — `Clase bicicleta`
 
 ### Código
-![Código Ejemplo 3](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 3](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE3Bike.png)  
 
 ### Salida 
-![Salida Ejemplo 3](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 3](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE3Bike.png) 
 
 ## Ejemplo 4 — `OOP: Encapsulación`
 - Se refiere a la ocultación de los detalles internos de un objeto y la exposición de una interfaz controlada para interactuar con él. Se logra mediante el uso de métodos y atributos en una clase para controlar el acceso a los datos internos del objeto. Los detalles internos de la implementación de un objeto se mantienen privados, y el acceso a ellos se realiza a través de métodos públicos, lo que promueve la seguridad y la integridad de los datos.
@@ -335,89 +335,89 @@ métodos para crear nueva información sobre ese objeto.
 - Ejemplo de encapsulacion y modificadores de acceso:
 
 ### Código
-![Código Ejemplo 4](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 4](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE4Encapsulacion.png)  
 
 ### Salida 
-![Salida Ejemplo 4](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 4](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE4Encapsulacion.png) 
 
 ## Ejemplo 5 — `OOP: Herencia`
 - La nueva clase que se crea se conoce como subclase (clase secundaria o derivada) y la clase existente de la que se deriva la clase secundaria se conoce como superclase (clase principal o base).
 - Ejemplo 1 de herencia:
 ### Código 
-![Código Ejemplo 5.1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 5.1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE5Herencia.png)  
 
 ### Salida 
-![Salida Ejemplo 5.1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 5.1](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE5Herencia.png) 
 
 - Ejemplo 2 de herencia:
 
 ### Código
-![Código Ejemplo 5.2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 5.2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE15virtuales.png)  
 
 ### Salida 
-![Salida Ejemplo 5.2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 5.2](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE5Herencia2.png) 
 
 ## Ejemplo 6 — ` Herencia, sobreescritura de métodos`
 
 ### Código 
-![Código Ejemplo 6](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 6](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE5Herencia2.png)  
 
 ### Salida 
-![Salida Ejemplo 6](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 6](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE15virtuales.png) 
 
 ## Ejemplo 7 — ` Herencia, Método super`
 
 ### Código 
-![Código Ejemplo 7](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 7](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE7Super.png)  
 
 ### Salida 
-![Salida Ejemplo 7](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 7](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE7Super.png) 
 
 ## Ejemplo 8 — ` Herencia, Múltiple`
 
 ### Código 
-![Código Ejemplo 8](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 8](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE8multiple.png)  
 
 ### Salida 
-![Salida Ejemplo 8](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 8](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE8multiple.png) 
 
 ## Ejemplo 9 — ` Herencia, Multinivel`
 
 ### Código 
-![Código Ejemplo 9](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 9](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE9multinivel.png)  
 
 ### Salida 
-![Salida Ejemplo 9](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 9](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE9multinivel.png) 
 
 ## Ejemplo 10 — ` Herencia múltiple y resolución de métodos`
 
 ### Código 
-![Código Ejemplo 10](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 10](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE10mro.png)  
 
 ### Salida 
-![Salida Ejemplo 10](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 10](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE10mro.png) 
 
 ## Ejemplo 11 — ` Sobrecarga de operadores `
 
 ### Código 
-![Código Ejemplo 11](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 11](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE11Sobrecarga.png)  
 
 ### Salida 
-![Salida Ejemplo 11](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 11](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE11Sobrecarga.png) 
 
 ## Ejemplo 12 — ` Sobrecarga de operadores de comparacion `
 
 ### Código 
-![Código Ejemplo 12](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 12](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE12Comparacion.png)  
 
 ### Salida 
-![Salida Ejemplo 12](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 12](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE12Comparacion.png) 
 
 ## Ejemplo 13 — ` Polimorfismo `
 - Significa más de una forma. Es decir, una misma entidad (método, operador u objeto) puede realizar diferentes operaciones en diferentes escenarios. Permite la misma interfaz para diferentes objetos, por lo que se puede escribir código eficiente.
 
 ### Código 
-![Código Ejemplo 13](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/CodigoE15virtuales.png)  
+![Código Ejemplo 13](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/CodigoE13Polimorfismo.png)  
 
 ### Salida 
-![Salida Ejemplo 13](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/Ejerciciosoppc/SalidaE15virtuales.png) 
+![Salida Ejemplo 13](https://raw.githubusercontent.com/krymar02/ie0417/main/semanas/semana6/Laboratorio/EjerciciosoopP/SalidaE13Polimorfismo.png) 
