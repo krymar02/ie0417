@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app.py .
 
-ENV SALUDO="Hola desde la imagen"
+ENV SALUDO="Hola, clase IE0417"
 
 EXPOSE 5000
 
