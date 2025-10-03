@@ -1,18 +1,19 @@
-version: '3.9'  # versión recomendada
-
 services:
   web:
     build:
-      context: .                  # ruta del Dockerfile.dev
+      context: .
       dockerfile: Dockerfile.dev
     image: capas-flask:compose
     container_name: web-capas
     ports:
-      - "5000:5000"              # host:contenedor
+      - "5000:5000"
     environment:
-     - SALUDO=Hola desde Compose
+      - SALUDO=Hola desde Compose
+    volumes:
+      - .:/app   # monta todo el directorio
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/', timeout=2)"]
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:5000/"]
       interval: 30s
       timeout: 3s
       retries: 3
+
