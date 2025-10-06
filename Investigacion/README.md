@@ -447,27 +447,51 @@ Este ejercicio demuestra de manera sencilla el ciclo de vida de un dato en un si
 
 ---
 ## VIII. Bibliografía en formato IEEE
-[1] A. S. Gillis and B. Lutkevich, "What is an embedded system?," TechTarget, Aug. 13, 2024. [En línea]. Disponible en: https://www-techtarget-com.translate.goog/iotagenda/definition/embedded-system?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc [Accedido: Sep. 30, 2025].
-[2] Digi International, "10 ejemplos reales de sistemas integrados," Digi Blog, Jun. 4, 2021. [En línea]. Disponible en: https://es.digi.com/blog/post/examples-of-embedded-systems [Accedido: Sep. 30, 2025].
-[3] ITU-T, Overview of the Internet of Things (Y.2060/Y.4000), ITU, 2012. [En línea]. Disponible en: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-Y.2060-201206-I%21%21PDF-E&lang=e&type=items [Accedido: Sep. 30, 2025].
-[4] NIST, "Internet of Things – Glossary," Computer Security Resource Center. [En línea]. Disponible en: https://csrc.nist.gov/glossary/term/internet_of_things [Accedido: Sep. 30, 2025].
-[5] OASIS, MQTT Version 3.1.1, OASIS Standard, Oct. 2014. [En línea]. Disponible en: https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.pdf [Accedido: Sep. 30, 2025].
-[6] H. S. Awan et al., "An IoT-Based Smart Home Automation System," Sensors, vol. 21, no. 14, Jul. 2021. [En línea]. Disponible en: https://pmc.ncbi.nlm.nih.gov/articles/PMC8198920/ [Accedido: Sep. 30, 2025].
-[7] S. Sharma et al., "The IoT and AI in Agriculture: The Time Is Now," Agronomy, vol. 14, no. 3, 2024. [En línea]. Disponible en: https://pmc.ncbi.nlm.nih.gov/articles/PMC12196926/ [Accedido: Sep. 30, 2025].
-[8] A. McCracken, "‘Matter’ could solve smart homes' biggest problem," Axios, Nov. 4, 2022. [En línea]. Disponible en: https://www.axios.com/2022/11/04/matter-smart-home-iot-amazon-google-apple-devices [Accedido: Sep. 30, 2025].
-[9] Amazon Web Services, What is AWS IoT? AWS Documentation, 2023. [En línea]. Disponible en: https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html [Accedido: Sep. 30, 2025].
-[10] Microsoft, Azure IoT Hub Documentation, Microsoft Learn, 2023. [En línea]. Disponible en: https://learn.microsoft.com/en-us/azure/iot-hub/ [Accedido: Sep. 30, 2025].
-[11] OASIS, MQTT Version 3.1.1 Committee Specification Draft 02, OASIS, 2013. [En línea]. Disponible en: https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/csprd02/mqtt-v3.1.1-csprd02.pdf [Accedido: Sep. 30, 2025].
-[12] Amazon Web Services, AWS IoT Core Documentation, AWS Docs, 2023. [En línea]. Disponible en: https://docs.aws.amazon.com/iot/ [Accedido: Sep. 30, 2025].
-[13] NIST, Definitions of IoT, NIST, 2020. [En línea]. Disponible en: https://www.nist.gov/document/definitions-iot [Accedido: Sep. 30, 2025].
-[14] D. Newman, "Google Home’s data leak proves the IoT is still deeply flawed," WIRED, Jul. 2018. [En línea]. Disponible en: https://www.wired.com/story/google-home-chromecast-location-security-data-privacy-leak [Accedido: Sep. 30, 2025].
-[15] SMH Tech, "Embedded Systems: What Programming Languages Are Used in the Industry," SMH Tech Blog, 2023. [En línea]. Disponible en: https://smh-tech.com/corporate-blog/embedded-systems-what-programming-languages-are-used-in-the-industry/ [Accedido: Sep. 30, 2025].
-[16] Qt Blog, "C for Embedded: Advantages, Disadvantages, and Myths," Qt Blog, 2023. [En línea]. Disponible en: https://www.qt.io/blog/c-for-embedded-advantages-disadvantages-and-myths [Accedido: Sep. 30, 2025].
-[17] KO2, "Best Language for Embedded Systems," KO2 Blog, 2023. [En línea]. Disponible en: https://www.ko2.co.uk/best-language-for-embedded-systems/ [Accedido: Sep. 30, 2025].
-[18] Arduino, "Getting Started with Arduino," Arduino Docs, 2023. [En línea]. Disponible en: https://docs.arduino.cc/learn/starting-guide/arduino-comic/ [Accedido: Sep. 30, 2025].
-[19] Raspberry Pi, "¿Qué es Raspberry Pi?," Raspberry Pi Blog, 2023. [En línea]. Disponible en: https://raspberrypi.cl/que-es-raspberry/ [Accedido: Sep. 30, 2025].
-[20] Raspberry Pi, "Software de Raspberry Pi," Raspberry Pi Blog, 2025. [En línea]. Disponible en: https://raspberrypi.cl/software-de-raspberry/ [Accedido: Sep. 30, 2025].
-[21] Raspberry Pi, "Arduino vs Raspberry Pi," Raspberry Pi Blog, 2023. [En línea]. Disponible en: https://raspberrypi.cl/arduino-vs-raspberry/ [Accedido: Sep. 30, 2025].
-[22] DeepSeaDev, "ESP32 Chip Explained and Advantages," DeepSeaDev Blog, 2023. [En línea]. Disponible en: https://www.deepseadev.com/en/blog/esp32-chip-explained-and-advantages/ [Accedido: Sep. 30, 2025].
-[23] Espressif, "ESP32 SoC," Espressif Documentation, 2023. [En línea]. Disponible en: https://www.espressif.com/en/products/socs/esp32 [Accedido: Sep. 30, 2025].
+
+[1] A. S. Gillis and B. Lutkevich, "What is an embedded system?," *TechTarget*, Aug. 13, 2024. [En línea]. Disponible en: [https://www-techtarget-com.translate.goog/iotagenda/definition/embedded-system?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc](https://www-techtarget-com.translate.goog/iotagenda/definition/embedded-system?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc) [Accedido: Sep. 30, 2025].
+
+[2] Digi International, "10 ejemplos reales de sistemas integrados," *Digi Blog*, Jun. 4, 2021. [En línea]. Disponible en: [https://es.digi.com/blog/post/examples-of-embedded-systems](https://es.digi.com/blog/post/examples-of-embedded-systems) [Accedido: Sep. 30, 2025].
+
+[3] ITU-T, *Overview of the Internet of Things (Y.2060/Y.4000)*, ITU, 2012. [En línea]. Disponible en: [https://www.itu.int/rec/dologin_pub.asp?id=T-REC-Y.2060-201206-I%21%21PDF-E&lang=e&type=items](https://www.itu.int/rec/dologin_pub.asp?id=T-REC-Y.2060-201206-I%21%21PDF-E&lang=e&type=items) [Accedido: Sep. 30, 2025].
+
+[4] NIST, "Internet of Things – Glossary," *Computer Security Resource Center*. [En línea]. Disponible en: [https://csrc.nist.gov/glossary/term/internet_of_things](https://csrc.nist.gov/glossary/term/internet_of_things) [Accedido: Sep. 30, 2025].
+
+[5] OASIS, *MQTT Version 3.1.1*, OASIS Standard, Oct. 2014. [En línea]. Disponible en: [https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.pdf](https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.pdf) [Accedido: Sep. 30, 2025].
+
+[6] H. S. Awan *et al.*, "An IoT-Based Smart Home Automation System," *Sensors*, vol. 21, no. 14, Jul. 2021. [En línea]. Disponible en: [https://pmc.ncbi.nlm.nih.gov/articles/PMC8198920/](https://pmc.ncbi.nlm.nih.gov/articles/PMC8198920/) [Accedido: Sep. 30, 2025].
+
+[7] S. Sharma *et al.*, "The IoT and AI in Agriculture: The Time Is Now," *Agronomy*, vol. 14, no. 3, 2024. [En línea]. Disponible en: [https://pmc.ncbi.nlm.nih.gov/articles/PMC12196926/](https://pmc.ncbi.nlm.nih.gov/articles/PMC12196926/) [Accedido: Sep. 30, 2025].
+
+[8] A. McCracken, "‘Matter’ could solve smart homes' biggest problem," *Axios*, Nov. 4, 2022. [En línea]. Disponible en: [https://www.axios.com/2022/11/04/matter-smart-home-iot-amazon-google-apple-devices](https://www.axios.com/2022/11/04/matter-smart-home-iot-amazon-google-apple-devices) [Accedido: Sep. 30, 2025].
+
+[9] Amazon Web Services, *What is AWS IoT?*, AWS Documentation, 2023. [En línea]. Disponible en: [https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html) [Accedido: Sep. 30, 2025].
+
+[10] Microsoft, *Azure IoT Hub Documentation*, Microsoft Learn, 2023. [En línea]. Disponible en: [https://learn.microsoft.com/en-us/azure/iot-hub/](https://learn.microsoft.com/en-us/azure/iot-hub/) [Accedido: Sep. 30, 2025].
+
+[11] OASIS, *MQTT Version 3.1.1 Committee Specification Draft 02*, OASIS, 2013. [En línea]. Disponible en: [https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/csprd02/mqtt-v3.1.1-csprd02.pdf](https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/csprd02/mqtt-v3.1.1-csprd02.pdf) [Accedido: Sep. 30, 2025].
+
+[12] Amazon Web Services, *AWS IoT Core Documentation*, AWS Docs, 2023. [En línea]. Disponible en: [https://docs.aws.amazon.com/iot/](https://docs.aws.amazon.com/iot/) [Accedido: Sep. 30, 2025].
+
+[13] NIST, *Definitions of IoT*, NIST, 2020. [En línea]. Disponible en: [https://www.nist.gov/document/definitions-iot](https://www.nist.gov/document/definitions-iot) [Accedido: Sep. 30, 2025].
+
+[14] D. Newman, "Google Home’s data leak proves the IoT is still deeply flawed," *WIRED*, Jul. 2018. [En línea]. Disponible en: [https://www.wired.com/story/google-home-chromecast-location-security-data-privacy-leak](https://www.wired.com/story/google-home-chromecast-location-security-data-privacy-leak) [Accedido: Sep. 30, 2025].
+
+[15] SMH Tech, "Embedded Systems: What Programming Languages Are Used in the Industry," *SMH Tech Blog*, 2023. [En línea]. Disponible en: [https://smh-tech.com/corporate-blog/embedded-systems-what-programming-languages-are-used-in-the-industry/](https://smh-tech.com/corporate-blog/embedded-systems-what-programming-languages-are-used-in-the-industry/) [Accedido: Sep. 30, 2025].
+
+[16] Qt Blog, "C for Embedded: Advantages, Disadvantages, and Myths," *Qt Blog*, 2023. [En línea]. Disponible en: [https://www.qt.io/blog/c-for-embedded-advantages-disadvantages-and-myths](https://www.qt.io/blog/c-for-embedded-advantages-disadvantages-and-myths) [Accedido: Sep. 30, 2025].
+
+[17] KO2, "Best Language for Embedded Systems," *KO2 Blog*, 2023. [En línea]. Disponible en: [https://www.ko2.co.uk/best-language-for-embedded-systems/](https://www.ko2.co.uk/best-language-for-embedded-systems/) [Accedido: Sep. 30, 2025].
+
+[18] Arduino, "Getting Started with Arduino," *Arduino Docs*, 2023. [En línea]. Disponible en: [https://docs.arduino.cc/learn/starting-guide/arduino-comic/](https://docs.arduino.cc/learn/starting-guide/arduino-comic/) [Accedido: Sep. 30, 2025].
+
+[19] Raspberry Pi, "¿Qué es Raspberry Pi?," *Raspberry Pi Blog*, 2023. [En línea]. Disponible en: [https://raspberrypi.cl/que-es-raspberry/](https://raspberrypi.cl/que-es-raspberry/) [Accedido: Sep. 30, 2025].
+
+[20] Raspberry Pi, "Software de Raspberry Pi," *Raspberry Pi Blog*, 2025. [En línea]. Disponible en: [https://raspberrypi.cl/software-de-raspberry/](https://raspberrypi.cl/software-de-raspberry/) [Accedido: Sep. 30, 2025].
+
+[21] Raspberry Pi, "Arduino vs Raspberry Pi," *Raspberry Pi Blog*, 2023. [En línea]. Disponible en: [https://raspberrypi.cl/arduino-vs-raspberry/](https://raspberrypi.cl/arduino-vs-raspberry/) [Accedido: Sep. 30, 2025].
+
+[22] DeepSeaDev, "ESP32 Chip Explained and Advantages," *DeepSeaDev Blog*, 2023. [En línea]. Disponible en: [https://www.deepseadev.com/en/blog/esp32-chip-explained-and-advantages/](https://www.deepseadev.com/en/blog/esp32-chip-explained-and-advantages/) [Accedido: Sep. 30, 2025].
+
+[23] Espressif, "ESP32 SoC," *Espressif Documentation*, 2023. [En línea]. Disponible en: [https://www.espressif.com/en/products/socs/esp32](https://www.espressif.com/en/products/socs/esp32) [Accedido: Sep. 30, 2025].
+
 
