@@ -348,60 +348,101 @@ Compatible con múltiples frameworks y lenguajes:
 
 
 ## V. Caso práctico
+### Caso Práctico 5: Sensor Inteligente Conectado a la Nube
 
+### Descripción General
+
+Para este caso práctico se simuló el funcionamiento de un sistema IoT utilizando la plataforma Wokwi (simulador online de microcontroladores) junto con el servicio en la nube ThingSpeak.
+
+El flujo de datos se desarrolla de la siguiente forma:
+
+1. *Sensor (DHT22):* mide valores de temperatura y humedad. En este caso, el sensor es virtual y se encuentra dentro del simulador.  
+2. *Microcontrolador (ESP32):* recibe los datos del sensor, los procesa y los prepara en formato adecuado (valores numéricos). Gracias a la conexión Wi-Fi, el ESP32 envía periódicamente esta información hacia la nube.  
+3. *Plataforma en la nube (ThingSpeak):* recibe los datos enviados por el ESP32, los almacena y genera gráficas en tiempo real.  
+4. *Dashboard web:* muestra los resultados de forma visual. De esta manera se pueden observar tendencias de temperatura y humedad en un panel accesible desde cualquier dispositivo conectado a internet.
+
+---
+
+### Explicación Técnica
+
+Se utilizó un proyecto en Wokwi con un ESP32 virtual conectado a un sensor DHT22.
+
+El código del microcontrolador se programó para:
+
+- Conectarse a una red Wi-Fi.  
+- Realizar peticiones HTTP hacia el servicio ThingSpeak.  
+- Enviar los datos cada 15 segundos.
+
+ThingSpeak recibió los valores y los representó automáticamente en gráficas dentro de un canal configurado con dos campos:
+
+- Temperatura  
+- Humedad
+
+### Resultados
+
+Este ejercicio demuestra de manera sencilla el ciclo de vida de un dato en un sistema IoT:
+
+| Etapa | Descripción |
+|-------|--------------|
+| Captura | Sensor DHT22 mide temperatura y humedad. |
+| Procesamiento y Transmisión | ESP32 procesa los datos y los envía por Wi-Fi. |
+| Almacenamiento en la nube | ThingSpeak guarda los valores recibidos. |
+| Visualización | Dashboard web muestra las gráficas en tiempo real. |
 ## VI. Áreas laborales
 
 ### Firmware Developer
 - **Qué hace:**  
-  Desarrolla software cercano al hardware de dispositivos electrónicos, optimizando la comunicación entre microcontroladores, sensores y actuadores. Crea drivers, protocolos de comunicación y algoritmos de control, asegurando eficiencia y bajo consumo energético.
+  Desarrolla software cercano al hardware de dispositivos electrónicos, optimizando la comunicación entre microcontroladores, sensores y actuadores. Crea drivers, protocolos de comunicación y algoritmos de control, asegurando eficiencia, bajo consumo energético y confiabilidad en la ejecución en tiempo real.
 
 - **Ejemplo de empresas:**  
-  - **Avient:** materiales avanzados y soluciones tecnológicas.  
-  - **KLA Tencor:** Control de calidad y automatización para semiconductores.
-
-### IoT Developer
-- **Qué hace:**  
-  Diseña soluciones que integran dispositivos conectados a internet, permitiendo automatización, monitoreo y análisis de datos en tiempo real. Implementa protocolos como MQTT, HTTP y WebSocket.
-
-- **Ejemplo de empresas:**  
-  - **Rootstack:** desarrollo de software y soluciones IoT.  
-  - **Intel Costa Rica:** soluciones de conectividad para IoT.
-
-### Ingeniero embebido
-- **Qué hace:**  
-  Diseña y programa sistemas con recursos limitados como microcontroladores y FPGA. Optimiza memoria, procesador y energía, desarrollando aplicaciones en robótica, control industrial y dispositivos médicos.
-
-- **Ejemplo de empresas:**  
-  - **Fiserv:** soluciones tecnológicas financieras y sistemas embebidos.  
-  - **HP Costa Rica:** Desarrollo de hardware y software integrado.
-
-### Sectores con creciente demanda
-- **Qué se hace:**  
-  Integración de sensores y actuadores, automatización de procesos, análisis de datos, desarrollo de productos inteligentes y monitoreo remoto.
-
-- **Ejemplo de empresas por sector:**  
-  - **Automotriz:** BMW Group Costa Rica, Continental Automotive.  
-  - **Salud:** InnovaTec, Hospital Clínica Bíblica.  
-  - **Domótica:** Smart Home Costa Rica, Tecnosoluciones CR.  
-  - **Industria 4.0:** Boston Scientific, Abbott.
+  - **Avionix:** desarrolla y prueba firmware para sistemas de aviónica, control de vuelo y comunicación en aeronaves. Los ingenieros trabajan en programación en C/C++ para microcontroladores, validación de hardware y pruebas de cumplimiento de normas aeronáuticas.  
+  - **Teradyne:** diseña y mantiene firmware para equipos de prueba automatizados (ATE) utilizados en la industria de semiconductores y electrónica. Se trabaja en controladores de instrumentos, comunicación con hardware y optimización de procesos de testeo.  
+  - **KLA Tencor:** desarrolla sistemas de control y análisis en la fabricación de semiconductores, con firmware que gestiona sensores de precisión y sistemas ópticos.  
+  - **Avient:** enfocado en materiales avanzados, también emplea desarrolladores de firmware para integrar sensores inteligentes en productos industriales y soluciones de manufactura avanzada.
 
 ---
 
-## VII. Conclusiones
-1. **Importancia de los sistemas embebidos:**  
-   Los sistemas embebidos constituyen el núcleo de numerosos dispositivos actuales, desde electrodomésticos hasta sistemas críticos médicos e industriales. Su capacidad para realizar funciones específicas de manera eficiente, confiable y con recursos limitados los hace indispensables en la vida cotidiana y en procesos industriales.
+### IoT Developer
+- **Qué hace:**  
+  Diseña soluciones que integran dispositivos conectados a internet, permitiendo automatización, monitoreo y análisis de datos en tiempo real. Implementa protocolos como MQTT, HTTP y WebSocket, y desarrolla dashboards o sistemas de control remoto.
 
-2. **Integración con IoT:**  
-   La combinación de sistemas embebidos con el Internet de las Cosas potencia la automatización, el monitoreo remoto y la toma de decisiones basada en datos en tiempo real. Las arquitecturas por capas y los protocolos de comunicación estandarizados permiten una interoperabilidad efectiva entre dispositivos, plataformas de edge y cloud, así como aplicaciones de alto valor.
+- **Ejemplo de empresas:**  
+  - **Intel Costa Rica:** desarrolla plataformas IoT para automatización industrial, monitoreo energético y optimización de procesos de manufactura mediante el análisis de datos en la nube.  
+  - **Rootstack:** integra soluciones de IoT con aplicaciones web y móviles, conectando sensores, cámaras o dispositivos inteligentes con servicios en la nube.  
+  - **Boston Scientific:** emplea desarrolladores IoT en el diseño de dispositivos médicos conectados, que recopilan y envían datos fisiológicos en tiempo real para diagnóstico o seguimiento clínico.  
+  - **Teradyne:** implementa IoT para control y monitoreo de equipos de prueba, enviando datos a servidores o plataformas cloud para análisis de rendimiento.
 
-3. **Selección de tecnologías y lenguajes:**  
-   La elección de lenguajes de programación, plataformas y microcontroladores depende de los requisitos del proyecto. Mientras C y C++ ofrecen control y eficiencia en tiempo real, Python facilita prototipado rápido y manejo de datos. Plataformas como Arduino, Raspberry Pi y ESP32 permiten implementar soluciones desde simples experimentos hasta proyectos de IoT avanzados.
+---
 
-4. **Aplicaciones prácticas y educativas:**  
-   La utilización de estas tecnologías en entornos educativos y de prototipado demuestra que los sistemas embebidos y el IoT son herramientas accesibles para aprender programación, electrónica y automatización, promoviendo el desarrollo de habilidades técnicas aplicables a la industria moderna.
+### Ingeniero embebido
+- **Qué hace:**  
+  Diseña y programa sistemas con recursos limitados (microcontroladores, FPGA o SoC). Desarrolla controladores, firmware y software de bajo nivel que garantizan el funcionamiento de sistemas críticos en sectores como la industria médica, automotriz o de manufactura avanzada.
 
-5. **Perspectiva laboral y profesional:**  
-   La creciente demanda de profesionales en firmware, IoT y sistemas embebidos refleja la relevancia de estos conocimientos en sectores como la automoción, salud, domótica e industria 4.0. Las oportunidades laborales se centran en el diseño, programación y optimización de dispositivos inteligentes y conectados.
+- **Ejemplo de empresas:**  
+  - **Avionix:** desarrolla sistemas embebidos para aeronaves, incluyendo módulos de navegación, monitoreo y comunicación. Los ingenieros realizan validación de hardware, pruebas en simuladores y depuración de código en entornos de tiempo real.  
+  - **HP Costa Rica:** diseña firmware embebido para impresoras y dispositivos inteligentes, incluyendo sensores de temperatura, tinta y movimiento.  
+  - **Fiserv:** implementa sistemas embebidos y soluciones seguras en dispositivos de pago y terminales financieras, garantizando integridad de datos y comunicación cifrada.  
+  - **Boston Scientific:** desarrolla firmware y software embebido para dispositivos médicos implantables y equipos de diagnóstico. Se trabaja con requisitos de precisión, seguridad y certificaciones FDA.  
+
+---
+
+### Sectores con creciente demanda
+- **Qué se hace:**  
+  Se integran sensores, actuadores y sistemas conectados para automatización, monitoreo y control de procesos. Las tareas incluyen diseño electrónico, programación embebida, comunicación inalámbrica y análisis de datos, aplicadas a sectores con innovación constante.
+
+- **Ejemplo de empresas por sector:**  
+  - **Automotriz:**  
+    - *BMW Group Costa Rica:* desarrollo y mantenimiento de sistemas electrónicos de control vehicular.  
+    - *Continental Automotive:* diseño de sistemas de asistencia al conductor y control de motores mediante software embebido.  
+  - **Salud:**  
+    - *Boston Scientific:* dispositivos médicos inteligentes conectados a la nube para monitoreo continuo de pacientes.  
+    - *Abbott:* sensores biomédicos y sistemas de análisis embebidos para diagnóstico.  
+  - **Domótica:**  
+    - *Smart Home Costa Rica:* desarrollo de sistemas automatizados de iluminación, clima y seguridad.  
+    - *Tecnosoluciones CR:* integración de sensores y controladores IoT para hogares y edificios inteligentes.  
+  - **Industria 4.0:**  
+    - *Teradyne:* automatización industrial mediante robótica colaborativa y sistemas de prueba conectados.  
+    - *KLA Tencor:* control de procesos de fabricación de chips con sistemas embebidos de alta precisión.  
 
 
 ---
