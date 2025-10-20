@@ -20,6 +20,8 @@
 
 - Primero, se clonó el repositorio para trabajar en la computadora.
 
+![Repo](images/1.png)
+
 ---
 
 ## Conceptos
@@ -32,17 +34,20 @@ Implementar un programa simple con 4 hilos que impriman mensajes en consola de f
 **Archivo creado:** `threads_basic.cpp`
 
 **Imagen del código**  
-*(insertar aquí la imagen del código)*  
+![Código threads_basic](images/2.png)  
 
 ---
 
 ### Preguntas y desarrollo
 
 **Imagen de salida**  
-*(insertar aquí la imagen de la salida del programa)*  
+![Salida del programa](images/3.png)
 
 1. ¿Qué patrón de ejecución observas en la salida?  
+- En la salida se ve de manera **intercalada** entre los distintos hilos, como se muestra en la imagen. Los mensajes de los hilos no salen en un orden fijo y a veces se mezclan dentro de la misma línea, porque todos los hilos escriben en la consola al mismo tiempo. Esto muestra que los hilos se ejecutan concurrentemente, pero no de manera determinista.
+
 2. ¿Existe una forma de controlar el orden de ejecución sin cambiar la lógica principal?  
+- Pienso que no hay una forma fácil de que los hilos siempre salgan en el mismo orden sin usar sincronización. Pero se puede usar un std::mutex para que las líneas no se mezclen, o un std::condition_variable para dar turnos a los hilos y que se muestre diferente la salida. Ejecutarlos uno por uno garantiza orden, pero ya no sería concurrente.
 
 ---
 
