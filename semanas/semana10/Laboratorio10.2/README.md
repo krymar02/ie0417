@@ -213,15 +213,28 @@ Crear un script que ejecute la versión `productor_consumidor` con distintos par
 
 ## Ejecución con Docker
 
-**Imagen del código**  
-*(insertar aquí la imagen del código o configuración de Docker)*  
+**Imagen del código Docker**
+
+- Para la parte de docker utilice este.
+
+![Dockerfile](images/21.png)  
 
 **Comandos**
 
 ```bash
+docker run --rm laboratorio_concurrencia ./lab 1 2 5
 
-**Imagen de salida**  
-*(insertar aquí la imagen de la salida o del gráfico)*  
+```
+
+**Resultados**  
+### Resumen de Docker
+
+- **Imagen**: Basada en `ubuntu:22.04`, con `g++`, `cmake` y `make` instalados.  
+- **Código**: Se copia y compila `productor_consumidor.cpp` dentro del contenedor generando el ejecutable `lab`.  
+- **Ejecución**: `docker run --rm laboratorio_concurrencia ./lab X Y Z` corre el programa aislado, mostrando productores generando tareas y consumidores procesándolas.  
+- **Beneficios**: Entorno consistente, sin conflictos locales, permite repetir experimentos con distintos hilos.  
+- **Resultado**: Se observa la concurrencia en acción y se registran los tiempos de ejecución para análisis de rendimiento.
+
 
 
 
