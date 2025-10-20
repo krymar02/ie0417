@@ -58,8 +58,13 @@ Implementar un programa simple con 4 hilos que impriman mensajes en consola de f
 Implementar un contador compartido entre varios hilos sin protección, y luego corregirlo usando `std::mutex`.  
 **Archivo creado:** `contador_compartido.cpp`
 
-**Imagen del código**  
-*(insertar aquí la imagen del código)*  
+**Imagen del código con mutex**  
+![Contador con mutex](4.png)
+
+**Archivo creado:** `contador_compartido2.cpp`
+
+**Imagen del código sin mutex**  
+![Contador sin mutex](7.png)
 
 ---
 
@@ -67,20 +72,23 @@ Implementar un contador compartido entre varios hilos sin protección, y luego c
 
 1. Ejecutar el código con y sin `mutex`, comparar resultados.  
 
-**Imagen del código con mutex**  
-*(insertar aquí la imagen del código con mutex)*  
+**Imagen de salida del código con mutex**  
+![Contador con mutex](5.png)
+  
 
-**Imagen del código sin mutex**  
-*(insertar aquí la imagen del código sin mutex)*  
+**Imagen de salida del código sin mutex**  
+![Contador sin mutex](6.png)  
 
 **Resultados de la comparación**  
-*(insertar aquí los resultados y análisis)*  
+- Con mutex: El contador siempre termina en 3000, que es el valor correcto.  
+- Sin mutex: El contador **podría terminar en un número menor a 3000** debido a condiciones de carrera. En este caso, como solo usamos 3 hilos y 1000 iteraciones, el resultado terminó siendo 3000 por coincidencia. 
 
 2. Explicar por qué ocurre el resultado incorrecto en la versión sin sincronización.  
-3. Estimar cuántos “context switch” pueden estar ocurriendo (de manera conceptual).  
+- El problema aparece cuando varios hilos leen y escriben la variable `contador` al mismo tiempo, sobrescribiendo incrementos antes de completarse. Esto se llama **condición de carrera**.
 
-**Imagen de salida**  
-*(insertar aquí la imagen de la salida)*  
+3. Estimar cuántos “context switch” pueden estar ocurriendo (de manera conceptual).  
+- En este caso, cada cambio de ejecución entre hilos es un **context switch**. Con muchas iteraciones y varios hilos, estos switches ocurren muchas veces y afectan cómo se mezclan las operaciones sobre lo que seria la variable compartida.
+
 
 ---
 
