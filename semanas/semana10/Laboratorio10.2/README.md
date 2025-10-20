@@ -59,12 +59,12 @@ Implementar un contador compartido entre varios hilos sin protección, y luego c
 **Archivo creado:** `contador_compartido.cpp`
 
 **Imagen del código con mutex**  
-![Contador con mutex](4.png)
+![Contador con mutex](images/4.png)
 
 **Archivo creado:** `contador_compartido2.cpp`
 
 **Imagen del código sin mutex**  
-![Contador sin mutex](7.png)
+![Contador sin mutex](images/7.png)
 
 ---
 
@@ -73,11 +73,11 @@ Implementar un contador compartido entre varios hilos sin protección, y luego c
 1. Ejecutar el código con y sin `mutex`, comparar resultados.  
 
 **Imagen de salida del código con mutex**  
-![Contador con mutex](5.png)
+![Contador con mutex](images/5.png)
   
 
 **Imagen de salida del código sin mutex**  
-![Contador sin mutex](6.png)  
+![Contador sin mutex](images/6.png)  
 
 **Resultados de la comparación**  
 - Con mutex: El contador siempre termina en 3000, que es el valor correcto.  
@@ -99,18 +99,26 @@ Implementar el clásico problema Productor-Consumidor con buffer limitado.
 **Archivo creado:** `productor_consumidor.cpp`
 
 **Imagen del código**  
-*(insertar aquí la imagen del código)*  
+![Código Productor-Consumidor](images/8.png) 
+![Código Productor-Consumidor](images/9.png)
 
 ---
+**Imagen de salida**  
+![Salida Productor-Consumidor](images/10.png)  
 
+---
 ### Preguntas y desarrollo
 
 1. ¿Qué ocurriría si se elimina el `cv_productor.wait`?  
-2. ¿Por qué se usa `unique_lock` y no `lock_guard` en este caso?  
-3. ¿Qué garantiza `cv_consumidor.notify_all()`?  
+- Si quitamos `cv_productor.wait`, los productores seguirían intentando agregar tareas al buffer sin esperar a que haya espacio.  
+Lo que puede causar que el buffer se llene más allá de su límite (`BUFFER_SIZE`) o que los productores tengan que usar lógica adicional para no sobrescribir datos. Entomnces, **el buffer ya no estaría controlado**, y podría generar errores o resultados inesperados.
 
-**Imagen de salida**  
-*(insertar aquí la imagen de la salida)*  
+2. ¿Por qué se usa `unique_lock` y no `lock_guard` en este caso?  
+- Se usa `unique_lock` porque permite **liberar y volver a adquirir el mutex automáticamente**, lo cual es necesario para usar `std::condition_variable::wait`. Mientras que `lock_guard` solo bloquea y desbloquea al salir del scope, y no funciona con `wait`.
+
+### Pregunta 3: ¿Qué garantiza cv_consumidor.notify_all()?
+3. ¿Qué garantiza `cv_consumidor.notify_all()`?  
+- En este caso, `cv_consumidor.notify_all()` se encarga de despertar a todos los hilos consumidores que estén esperando. Garantiza que **si hay tareas en el buffer**, los consumidores puedan procesarlas inmediatamente. Sin esto, los consumidores podrían quedarse esperando aunque haya tareas disponibles.
 
 ---
 
