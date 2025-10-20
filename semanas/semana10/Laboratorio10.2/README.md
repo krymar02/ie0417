@@ -146,18 +146,55 @@ Crear un script que ejecute la versión `productor_consumidor` con distintos par
 **Archivo creado:** `test_run.sh`
 
 **Imagen del código**  
-*(insertar aquí la imagen del código)*  
+![Código testrun](images/14.png)  
 
 ---
+
+**Imagen de salida**  
+![Código testrun](images/15.png) 
+
+![Código testrun](images/16.png) 
+
+![Código testrun](images/17.png)
+
+![Código testrun](images/18.png)
+
+![Código testrun](images/19.png)
+
 
 ### Preguntas y desarrollo
 
 1. Registrar los tiempos de ejecución para cada configuración.  
-2. Elaborar un gráfico simple (puede hacerse con Excel o Python) que muestre el tiempo de ejecución total frente al número de hilos.  
+
+| Productores | Consumidores | Tiempo de ejecución (s) |
+|------------|--------------|-------------------------|
+| 1          | 1            | 1.0196                  |
+| 1          | 2            | 0.8217                  |
+| 1          | 4            | 0.8165                  |
+| 2          | 1            | 2.0349                  |
+| 2          | 2            | 1.0168                  |
+| 2          | 4            | 0.8212                  |
+| 4          | 1            | 4.0526                  |
+| 4          | 2            | 2.0271                  |
+| 4          | 4            | 1.0209                  |
+
+
+2. Elaborar un gráfico simple (puede hacerse con Excel o Python) que muestre el tiempo de ejecución total frente al número de hilos. 
+
+- Se generó un gráfico en Python usando `matplotlib` con la información anterior.  
+
+**Archivo creado:** `grafico_tiempos.py` en python
+
+![Código python grafico](images/20.png)
+
+**Gráfico**
+
+![grafico](images/tiempos_hilos.png)
+
+
 3. Explicar por qué el rendimiento no escala linealmente con el número de hilos.  
 
-**Imagen de salida**  
-*(insertar aquí la imagen de la salida o del gráfico)*  
+- Aunque se aumente el número de productores y consumidores, el tiempo de ejecución no mejora de forma lineal. Esto sucede porque los hilos comparten el mismo buffer limitado, entonces algunos productores deben esperar cuando el buffer está lleno y los consumidores cuando está vacío. Luego, el uso de mutex y condition_variable genera bloqueos y esperas que consumen tiempo de CPU. También hay cambios de contexto que el sistema operativo realiza para alternar entre hilos, entonces hace que no todos se ejecuten al mismo tiempo. El hardware tiene un número limitado de núcleos, cuando hay más hilos que núcleos, algunos hilos esperan que les toque y asi se reduce la mejora en el rendimiento. Entonces aunque se agreguen más hilos, los bloqueos y la contención impiden que el rendimiento escale de forma lineal y se refleja en los tiempos de ejecución que se obtuvo, por ejemplo, con 1 productor y 1 consumidor tarda 1.02 s, pero con 4 productores y 4 consumidores solo se reduce a 1.02 s, no a una cuarta parte como sería lo esperado.
 
 ---
 
