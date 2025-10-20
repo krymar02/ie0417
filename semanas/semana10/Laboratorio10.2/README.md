@@ -128,13 +128,15 @@ Lo que puede causar que el buffer se llene más allá de su límite (`BUFFER_SIZ
 **Instrucción:**  
 Implementar un programa que utilice `std::counting_semaphore` para controlar el acceso concurrente a un recurso limitado (por ejemplo, un "pool de conexiones").  
 Luego, añadir una `std::barrier` para sincronizar el final de cada ronda.  
-**Archivo creado:** *(insertar nombre del archivo)*  
+**Archivo creado:** *semaforo.cpp*  
 
 **Imagen del código**  
-*(insertar aquí la imagen del código)*  
+![Código semaforo](images/11.png)
 
 **Imagen de salida**  
-*(insertar aquí la imagen de la salida)*  
+![Código semaforo salida](images/12.png)
+
+![Código semaforo salida](images/13.png)
 
 ---
 
