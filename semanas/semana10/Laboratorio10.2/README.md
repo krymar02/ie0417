@@ -26,6 +26,21 @@
 
 ## Conceptos
 
+## Conceptos clave aprendidos en el laboratorio
+
+- **Concurrencia**: Ejecución de varias tareas que pueden convinarse en el tiempo, pero no necesariamente al mismo instante.  
+- **Paralelismo**: Ejecución simultánea de varias tareas en distintos núcleos de CPU.  
+- **Hilos (Threads)**: Unidades de ejecución que permiten tareas simultáneas dentro de un mismo programa.  
+- **Condición de carrera (Race Condition)**: Ocurre cuando varios hilos acceden y modifican datos compartidos sin sincronización.  
+- **Mutex (`std::mutex`)**: Es un mecanismo que garantiza acceso exclusivo a recursos compartidos, evitando condiciones de carrera.  
+- **Variables de condición (`std::condition_variable`)**: Son las que permiten que los hilos esperen hasta que se cumpla cierta condición antes de continuar.  
+- **Buffer limitado / Productor-Consumidor**: Es un modelo clásico donde productores agregan y consumidores procesan datos, coordinando accesos.  
+- **Tiempo de ejecución y escalabilidad**: Aumentar hilos no siempre mejora rendimiento linealmente; la sincronización y la administración de hilos generan sobrecarga.  
+- **Docker**: Es el que proporciona un entorno reproducible para compilar y ejecutar programas concurrentes de forma consistente como se evidencia en este lab.
+
+
+---
+
 ### Fase 1: Fundamentos prácticos de concurrencia
 
 **Actividad 1: Creación de hilos independientes**  
@@ -203,11 +218,34 @@ Crear un script que ejecute la versión `productor_consumidor` con distintos par
 **Preguntas y desarrollo**
 
 1. ¿Cuál es la diferencia entre paralelismo y concurrencia según tus resultados experimentales?  
+
+- Según los resultados del laboratorio, la concurrencia se refiere a manejar varias tareas que se superponen en el tiempo, como por ejemplo varios productores y consumidores alternándose para usar el buffer. El paralelismo ocurre cuando varias tareas realmente se ejecutan al mismo tiempo, como por ejemplo en diferentes núcleos de CPU. En las pruebas de este lab, vi que aunque aumentan los hilos, muchas veces la ejecución no era simultánea, lo que indica que era más concurrencia que paralelismo real.
+
 2. ¿Qué ventajas y desventajas observas al aumentar el número de hilos?  
+
+- **Ventajas**: Permite que más tareas se gestionen al mismo tiempo, lo que mejora la utilización del CPU y reduce el tiempo de espera de cada tarea individual.  
+- **Desventajas**: Aumentar hilos excesivamente puede generar sobrecarga de administración y más cambios de contexto, lo que puede disminuir el rendimiento y causar saturación del buffer.
+
+
 3. ¿Qué mecanismos fueron necesarios para evitar condiciones de carrera?  
+
+- Se usó `std::mutex` y `std::condition_variable` para proteger el acceso al buffer compartido y coordinar productores y consumidores. Esto ayuda a que no se den conflictos al leer/escribir datos compartidos y que los hilos esperen su turno de forma correcta.
+
+
 4. ¿Qué impacto tuvieron los mecanismos de sincronización en el rendimiento?  
+
+- La sincronización trajo retrasos como que los hilos deben esperar al mutex o la condición, lo que reduce el paralelismo efectivo. Esto explica por qué el rendimiento no escala linealmente al aumentar hilos, en consecuencia se genera mayor costo de la compu.
+
+
 5. ¿Qué aprendiste sobre el costo de crear y administrar hilos?  
+
+-  Bueno que crear hilos consume bastante tiempo y recursos, a veces no se ejecutan bien ni terminan bien. Luego que hilos adicionales aumentan la complejidad de administración y pueden provocar más cambios de contexto, especialmente si hay más hilos que núcleos disponibles, lo que puede incluso ralentizar la ejecución como fue en mi caso, en una de las imágenes no termina de ejecutarse por el tiempo de espera, mientras que en otra manipulé una archivo para que finalizara de manera correcta. 
+
+
 6. ¿Cómo se podría optimizar el balance entre granularidad y rendimiento?  
+
+- Para optimizar ese balance, se puede usar un número de hilos cercano al número de núcleos disponibles y también dividir el trabajo en tareas suficientemente grandes para mejorar el costo de sincronización. Se puede evitar usar hilos excesivamente finos o demasiadas esperas, para poder mejorar el balance entre la eficiencia y la concurrencia y los tiempos.
+
 
 ---
 
