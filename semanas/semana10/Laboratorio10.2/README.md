@@ -26,7 +26,7 @@
 
 ## Conceptos
 
-## Conceptos clave aprendidos en el laboratorio
+### Lo que aprendí
 
 - **Concurrencia**: Ejecución de varias tareas que pueden convinarse en el tiempo, pero no necesariamente al mismo instante.  
 - **Paralelismo**: Ejecución simultánea de varias tareas en distintos núcleos de CPU.  
@@ -44,9 +44,9 @@
 ### Fase 1: Fundamentos prácticos de concurrencia
 
 **Actividad 1: Creación de hilos independientes**  
-**Instrucción:**  
+- **Instrucción:**  
 Implementar un programa simple con 4 hilos que impriman mensajes en consola de forma intercalada.  
-**Archivo creado:** `threads_basic.cpp`
+- **Archivo creado:** `threads_basic.cpp`
 
 **Imagen del código**  
 ![Código threads_basic](images/2.png)  
@@ -69,14 +69,15 @@ Implementar un programa simple con 4 hilos que impriman mensajes en consola de f
 ### Fase 2: Sincronización y exclusión mutua
 
 **Actividad 2: Simulación de una variable compartida**  
-**Instrucción:**  
-Implementar un contador compartido entre varios hilos sin protección, y luego corregirlo usando `std::mutex`.  
-**Archivo creado:** `contador_compartido.cpp`
+- **Instrucción:**  
+Implementar un contador compartido entre varios hilos sin protección, y luego corregirlo usando `std::mutex`
+
+- **Archivo creado:** `contador_compartido.cpp`
 
 **Imagen del código con mutex**  
 ![Contador con mutex](images/4.png)
 
-**Archivo creado:** `contador_compartido2.cpp`
+- **Archivo creado:** `contador_compartido2.cpp`
 
 **Imagen del código sin mutex**  
 ![Contador sin mutex](images/7.png)
@@ -94,9 +95,9 @@ Implementar un contador compartido entre varios hilos sin protección, y luego c
 **Imagen de salida del código sin mutex**  
 ![Contador sin mutex](images/6.png)  
 
-**Resultados de la comparación**  
-- Con mutex: El contador siempre termina en 3000, que es el valor correcto.  
-- Sin mutex: El contador **podría terminar en un número menor a 3000** debido a condiciones de carrera. En este caso, como solo usamos 3 hilos y 1000 iteraciones, el resultado terminó siendo 3000 por coincidencia. 
+- **Resultados de la comparación**  
+  - Con mutex: El contador siempre termina en 3000, que es el valor correcto.  
+  - Sin mutex: El contador **podría terminar en un número menor a 3000** debido a condiciones de carrera. En este caso, como solo usamos 3 hilos y 1000 iteraciones, el resultado terminó siendo 3000 por coincidencia. 
 
 2. Explicar por qué ocurre el resultado incorrecto en la versión sin sincronización.  
 - El problema aparece cuando varios hilos leen y escriben la variable `contador` al mismo tiempo, sobrescribiendo incrementos antes de completarse. Esto se llama **condición de carrera**.
@@ -109,9 +110,10 @@ Implementar un contador compartido entre varios hilos sin protección, y luego c
 
 ### Actividad 3: Variables de condición (modelo Productor-Consumidor)
 
-**Instrucción:**  
-Implementar el clásico problema Productor-Consumidor con buffer limitado.  
-**Archivo creado:** `productor_consumidor.cpp`
+- **Instrucción:**  
+Implementar el clásico problema Productor-Consumidor con buffer limitado. 
+
+- **Archivo creado:** `productor_consumidor.cpp`
 
 **Imagen del código**  
 ![Código Productor-Consumidor](images/8.png) 
@@ -131,7 +133,6 @@ Lo que puede causar que el buffer se llene más allá de su límite (`BUFFER_SIZ
 2. ¿Por qué se usa `unique_lock` y no `lock_guard` en este caso?  
 - Se usa `unique_lock` porque permite **liberar y volver a adquirir el mutex automáticamente**, lo cual es necesario para usar `std::condition_variable::wait`. Mientras que `lock_guard` solo bloquea y desbloquea al salir del scope, y no funciona con `wait`.
 
-### Pregunta 3: ¿Qué garantiza cv_consumidor.notify_all()?
 3. ¿Qué garantiza `cv_consumidor.notify_all()`?  
 - En este caso, `cv_consumidor.notify_all()` se encarga de despertar a todos los hilos consumidores que estén esperando. Garantiza que **si hay tareas en el buffer**, los consumidores puedan procesarlas inmediatamente. Sin esto, los consumidores podrían quedarse esperando aunque haya tareas disponibles.
 
@@ -140,10 +141,10 @@ Lo que puede causar que el buffer se llene más allá de su límite (`BUFFER_SIZ
 ### Fase 3: Mecanismos avanzados y análisis de rendimiento
 
 **Actividad 4: Uso de semáforos y barreras**  
-**Instrucción:**  
-Implementar un programa que utilice `std::counting_semaphore` para controlar el acceso concurrente a un recurso limitado (por ejemplo, un "pool de conexiones").  
-Luego, añadir una `std::barrier` para sincronizar el final de cada ronda.  
-**Archivo creado:** *semaforo.cpp*  
+- **Instrucción:**  
+Implementar un programa que utilice `std::counting_semaphore` para controlar el acceso concurrente a un recurso limitado (por ejemplo, un "pool de conexiones"). Luego, añadir una `std::barrier` para sincronizar el final de cada ronda.  
+
+- **Archivo creado:** *semaforo.cpp*  
 
 **Imagen del código**  
 ![Código semaforo](images/11.png)
@@ -156,9 +157,9 @@ Luego, añadir una `std::barrier` para sincronizar el final de cada ronda.
 ---
 
 **Actividad 5: Experimento de rendimiento**  
-**Instrucción:**  
+- **Instrucción:**  
 Crear un script que ejecute la versión `productor_consumidor` con distintos parámetros.  
-**Archivo creado:** `test_run.sh`
+- **Archivo creado:** `test_run.sh`
 
 **Imagen del código**  
 ![Código testrun](images/14.png)  
@@ -198,11 +199,11 @@ Crear un script que ejecute la versión `productor_consumidor` con distintos par
 
 - Se generó un gráfico en Python usando `matplotlib` con la información anterior.  
 
-**Archivo creado:** `grafico_tiempos.py` en python
+- **Archivo creado:** `grafico_tiempos.py` en python
 
 ![Código python grafico](images/20.png)
 
-**Gráfico**
+- **Gráfico**
 
 ![grafico](images/tiempos_hilos.png)
 
@@ -257,21 +258,20 @@ Crear un script que ejecute la versión `productor_consumidor` con distintos par
 
 ![Dockerfile](images/21.png)  
 
-**Comandos**
+- **Comandos**
 
-```bash
-docker run --rm laboratorio_concurrencia ./lab 1 2 5
+  ```bash
+  docker run --rm laboratorio_concurrencia ./lab 1 2 5
 
-```
+  ```
 
-**Resultados**  
-### Resumen de Docker
+- **Resultados**  
 
-- **Imagen**: Basada en `ubuntu:22.04`, con `g++`, `cmake` y `make` instalados.  
-- **Código**: Se copia y compila `productor_consumidor.cpp` dentro del contenedor generando el ejecutable `lab`.  
-- **Ejecución**: `docker run --rm laboratorio_concurrencia ./lab X Y Z` corre el programa aislado, mostrando productores generando tareas y consumidores procesándolas.  
-- **Beneficios**: Entorno consistente, sin conflictos locales, permite repetir experimentos con distintos hilos.  
-- **Resultado**: Se observa la concurrencia en acción y se registran los tiempos de ejecución para análisis de rendimiento.
+  - **Imagen**: Basada en `ubuntu:22.04`, con `g++`, `cmake` y `make` instalados.  
+  - **Código**: Se copia y compila `productor_consumidor.cpp` dentro del contenedor generando el ejecutable `lab`.  
+  - **Ejecución**: `docker run --rm laboratorio_concurrencia ./lab X Y Z` corre el programa aislado, mostrando productores generando tareas y consumidores procesándolas.  
+  - **Beneficios**: Entorno consistente, sin conflictos locales, permite repetir experimentos con distintos hilos.  
+  - **Resultado**: Se observa la concurrencia en acción y se registran los tiempos de ejecución para análisis de rendimiento.
 
 
 
