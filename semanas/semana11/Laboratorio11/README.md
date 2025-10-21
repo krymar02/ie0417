@@ -215,8 +215,16 @@ valgrind --tool=helgrind ./race
 
 ---
 
+### Fase 4:  Integración y automatización
+
+**Actividad 4:  Makefile y perfiles de análisis**  
+- **Instrucción:**  
+Crear un Makefile que automatice la compilación y ejecución con los diferentes perfiles de depuración.
+
+- **Archivo creado:** `Makefile`
+
+**Imagen del código**  
+![Código](images/4.png)
 
 
-
-
-
+---
