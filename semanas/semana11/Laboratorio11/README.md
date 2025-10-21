@@ -6,17 +6,18 @@
 ---
 
 ## Índice
-- [Preparación del laboratorio 10](#preparación-del-laboratorio-10)
+- [Preparación del laboratorio 11](#preparación-del-laboratorio-11)
 - [Conceptos](#conceptos)
-  - [Fase 1: Fundamentos prácticos de concurrencia](#fase-1-fundamentos-prácticos-de-concurrencia)
-  - [Fase 2: Sincronización y exclusión mutua](#fase-2-sincronización-y-exclusión-mutua)
-  - [Fase 3: Mecanismos avanzados y análisis de rendimiento](#fase-3-mecanismos-avanzados-y-análisis-de-rendimiento)
-  - [Fase 4: Análisis conceptual y reflexivo](#fase-4-análisis-conceptual-y-reflexivo)
+  - [Fase 1: Fundamentos prácticos de depuración](#fase-1-fundamentos-prácticos-de-depuración)
+  - [Fase 2: Detección de errores de memoria](#fase-2-detección-de-errores-de-memoria)
+  - [Fase 3: Análisis de concurrencia](#fase-3-análisis-de-concurrencia)
+  - [Fase 4: Integración y automatización](#fase-4-integración-y-automatización)
+  - [Fase 5: Análisis conceptual y reflexivo](#fase-5-análisis-conceptual-y-reflexivo)
 - [Ejecución con Docker](#ejecución-con-docker)
 
 ---
 
-## Preparación del laboratorio 10
+## Preparación del laboratorio 11
 
 - Primero, se actualizó el repositorio para trabajar en la computadora.
 
