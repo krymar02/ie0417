@@ -97,10 +97,8 @@ Analizar un programa con errores de asignación y fugas de memoria utilizando Ad
 
 - **Archivo creado:** `contador_compartido.cpp`
 
-**Imagen del código **  
+**Imagen del código**  
 ![Código](images/4.png)
-
-- **Archivo creado:** `contador_compartido2.cpp`
 
 ---
 
@@ -158,3 +156,67 @@ valgrind --leak-check=yes --track-origins=yes
 ### Fase 3:  Análisis de concurrencia
 
 **Actividad 3: Detección de condiciones de carrera**  
+- **Instrucción:**  
+Analizar un programa con accesos concurrentes a una variable compartida sin sincronización. Usar ThreadSanitizer y Helgrind para detectar el problema y luego corregirlo.
+
+- **Archivo creado:** `contador_compartido.cpp`
+
+**Imagen del código**  
+![Código](images/4.png)
+
+
+---
+
+- Desarrollo de tareas:
+
+1. Compilar con ThreadSanitizer:
+clang++ -g -O1 -fsanitize=thread -std=c++17 race.cpp -o
+race -lpthread
+./race
+
+**Imagen de la compilación**  
+![Compilación](images/2.png)  
+
+2. Ejecutar con Helgrind:
+valgrind --tool=helgrind ./race
+
+**Imagen de la ejecución**  
+![Ejecución Helgrind](images/2.png)  
+
+3. Registrar el diagnóstico de ambas herramientas.
+
+**Diagnóstico de errores con ThreadSanitizer:**  
+![Diagnóstico con ThreadSanitizer](images/2.png) 
+
+**Diagnóstico de errores con Helgrind:**  
+![Diagnóstico con Helgrind](images/2.png)
+- 
+
+4. Corregir el código usando std::mutex o std::atomic<int>.
+
+**Corrección del código**  
+![Corrección del código](images/2.png) 
+
+**Imagen de salida**  
+![ejecución sin errores Valgrind](images/3.png)
+
+---
+
+### Preguntas y desarrollo
+
+1. ¿Qué tipo de acceso detecta ThreadSanitizer como data race?
+-
+
+2. ¿Por qué Helgrind tiene un mayor costo de ejecución?
+-
+
+3. ¿Qué ventajas tiene usar std::atomic frente a std::mutex?
+-
+
+---
+
+
+
+
+
+
