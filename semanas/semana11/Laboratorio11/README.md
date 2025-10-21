@@ -228,3 +228,43 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 
 
 ---
+### Fase 5:  Análisis conceptual y reflexivo
+
+**APreguntas de análisis:**  
+1. ¿Qué diferencias existen entre un error de ejecución y un error lógico?
+- 
+
+2. ¿Qué ventajas presenta AddressSanitizer frente a Valgrind?
+- 
+
+3. ¿Cómo afectan las herramientas de depuración el rendimiento del programa?
+- 
+
+4. ¿Por qué se recomienda compilar con -O0 durante la depuración?
+- 
+
+5. ¿Qué aprendiste sobre la importancia de diagnosticar errores antes de liberar un programa?
+- 
+
+---
+
+## Ejecución con Docker
+
+**Imagen del código Docker**
+
+- Para la parte de docker utilicé este.
+
+![Dockerfile](images/21.png)  
+
+- **Comandos**
+
+  ```bash
+  Comandos:
+    docker build -t lab-debug .
+    docker run -it --rm -v $(pwd):/lab-debug lab-debug
+    make asan
+
+
+  ```
+
+- **Resultados**  
