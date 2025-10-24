@@ -244,7 +244,23 @@ valgrind --tool=helgrind ./race
 **Diagnóstico de errores con Helgrind 3:**  
 ![Diagnóstico con Helgrind](images/26.png)
 
+**Diagnóstico de errores:**
+- ThreadSanitizer (TSan):
 
+  - **Error detectado:** `data race`.
+  - **Ubicación:** `contador++` → `race.cpp:10`.
+  - **Acceso reportado:** escritura concurrente (**Write of size 4**).
+  - **Descripción del problema:**
+    - Dos hilos (`t1` y `t2`) modifican la misma variable global `contador` sin sincronización.
+    - TSan muestra los *stack traces* identificando qué hilos acceden a la misma dirección al mismo tiempo.
+
+- Helgrind (Valgrind):
+
+  - **Error detectado:** `Possible data race`.
+  - **Ubicación:** en accesos a la dirección asociada a `contador`.  
+    - Se da un conflicto entre operaciones **read/write y write/write**
+  - **Mensajes clave:**
+    - “Locks held: none”, no hay mecanismos de sincronización. Y reporta múltiples accesos concurrentes durante la ejecución.
 
 4. Corregir el código usando std::mutex o std::atomic<int>.
 
