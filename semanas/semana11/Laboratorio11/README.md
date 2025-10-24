@@ -202,10 +202,10 @@ valgrind --leak-check=yes --track-origins=yes
 - **Instrucción:**  
 Analizar un programa con accesos concurrentes a una variable compartida sin sincronización. Usar ThreadSanitizer y Helgrind para detectar el problema y luego corregirlo.
 
-- **Archivo creado:** `contador_compartido.cpp`
+- **Archivo creado:** `race.cpp`
 
 **Imagen del código**  
-![Código](images/4.png)
+![Código](images/21.png)
 
 
 ---
@@ -217,23 +217,34 @@ clang++ -g -O1 -fsanitize=thread -std=c++17 race.cpp -o
 race -lpthread
 ./race
 
-**Imagen de la compilación**  
-![Compilación](images/2.png)  
+**Imagen de la compilación 1**  
+![Compilación ThreadSanitizer](images/27.png) 
+
 
 2. Ejecutar con Helgrind:
 valgrind --tool=helgrind ./race
 
 **Imagen de la ejecución**  
-![Ejecución Helgrind](images/2.png)  
+![Ejecución Helgrind](images/27.png)  
 
 3. Registrar el diagnóstico de ambas herramientas.
 
-**Diagnóstico de errores con ThreadSanitizer:**  
-![Diagnóstico con ThreadSanitizer](images/2.png) 
+**Diagnóstico de errores con ThreadSanitizer 1:**  
+![Diagnóstico con ThreadSanitizer](images/22.png) 
 
-**Diagnóstico de errores con Helgrind:**  
-![Diagnóstico con Helgrind](images/2.png)
-- 
+**Diagnóstico de errores con ThreadSanitizer 2:**  
+![Diagnóstico con ThreadSanitizer](images/23.png) 
+
+**Diagnóstico de errores con Helgrind 1:**  
+![Diagnóstico con Helgrind](images/24.png)
+
+**Diagnóstico de errores con Helgrind 2:**  
+![Diagnóstico con Helgrind](images/25.png)
+
+**Diagnóstico de errores con Helgrind 3:**  
+![Diagnóstico con Helgrind](images/26.png)
+
+
 
 4. Corregir el código usando std::mutex o std::atomic<int>.
 
