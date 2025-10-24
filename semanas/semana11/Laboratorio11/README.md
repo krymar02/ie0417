@@ -29,7 +29,45 @@
 
 ### Lo que aprendí
 
+## Tipos de errores
+- **Errores de ejecución:** El programa compila, pero falla al ejecutarse (por ejemplo, acceso inválido a memoria).
+- **Errores lógicos:** El programa corre sin fallar, pero el resultado es incorrecto.
 
+---
+
+## Errores de memoria
+- **Buffer overflow:** Se refiere a la escritura fuera del espacio reservado.
+- **Use-after-free:** Se usa memoria ya liberada.
+- **Memory leak:** Se usa para reservar memoria pero nunca se libera.
+
+---
+
+## Herramientas para depuración de memoria
+- **AddressSanitizer (ASan):** Detecta rápido errores como overflows y use-after-free.
+- **Valgrind / Memcheck:** Analiza fugas y accesos inválidos más a fondo, pero con mayor costo en rendimiento.
+- Compilar con `-g` permite ubicar la línea del error.
+
+---
+
+## Concurrencia
+- **Data race:** Sirve para ver dos hilos que acceden a la misma variable sin sincronización y al menos uno escribe, resultados impredecibles.
+- **ThreadSanitizer (TSan):** Sirve para detectar data races.
+- **Helgrind:** Se encarga de revisar reglas de sincronización, es más pesado que TSan.
+
+### Soluciones de sincronización
+- `std::mutex`: Sirve para bloquear, para garantizar el acceso seguro y puede generar contención.
+- `std::atomic<int>`: Sirve para operaciones seguras sin bloqueo y es útil para contadores simples.
+
+---
+
+## Automatización con Makefile
+- Permite compilar y ejecutar herramientas sin escribir comandos largos.
+- Facilita el trabajo repetido y evita errores de comandos manuales.
+
+---
+
+## Entornos aislados
+- **Docker:** Permite ejecutar todo el laboratorio en un entorno limpio y reproducible, sin depender de la configuración local del equipo.
 
 ---
 
@@ -412,3 +450,4 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 - Salida 4:
 
 ![Dockerfile salida](images/42.png)
+                                                                                                                                                                                                                                                                                                                                        
