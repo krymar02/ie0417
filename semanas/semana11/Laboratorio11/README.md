@@ -40,7 +40,8 @@
 Implementar un programa que contenga errores de lógica y de ejecución, y utilizar gdb para analizarlo paso a paso.  
 - **Archivo creado:** `suma_vector.cpp`
 
-**Imagen del código**  
+**Imagen del código** 
+
 ![Código suma_vector](images/2.png)  
 
 ---
@@ -54,11 +55,13 @@ g++ -g -O0 -std=c++17 suma_vector.cpp -o suma_vector
 gdb ./suma_vector
 
 **Imagen de la compilación y ejecución**  
+
 ![Compilación fallida](images/4.png)  
 
 3. Usar los comandos run, next, step, print, bt e info locals para ubicar los errores.
 
 **Busqueda de errores**  
+
 ![Ejecución](images/5.png) 
 
 - En la depuración en **gdb**, usé `break main` para poner un *breakpoint* al inicio de `main` y que el programa se detuviera ahí, para que avance despacio. Luego usé `catch throw` para que se pare justo cuando se lance una excepción C++, así se puede ver el fallo cuando sucede. Después, con `run` arranqué el programa para poder localizar el problema.  
@@ -72,15 +75,19 @@ gdb ./suma_vector
 - Por último, se muestra que antes `bt` e `info locals` decían "No stack" / "No frame" porque se usaron después de que el programa ya se había terminado. Con `catch throw` activo, **gdb** se detiene justo cuando se lanza la excepción, en ese momento `bt` e `info locals` sí brindan información útil.
 
 **Parte 1 de la ejecución con gdb**  
+
 ![Ejecución 1](images/6.png) 
 
 **Parte 2 de la ejecución con gdb**  
+
 ![Ejecución 2](images/7.png) 
 
 **Parte 3 de la ejecución con gdb**  
+
 ![Ejecución 3](images/8.png) 
 
 **Parte 4 de la ejecución con gdb**  
+
 ![Ejecución 4](images/9.png) 
 
 
@@ -96,9 +103,11 @@ gdb ./suma_vector
 - Se realizó la corrección del c ódigo, lo que da una salida correcta.
 
 **Corrección del código**  
+
 ![Corrección del código](images/10.png) 
 
 **Imagen de salida**  
+
 ![Salida del programa](images/11.png)
 ---
 
@@ -125,6 +134,7 @@ Analizar un programa con errores de asignación y fugas de memoria utilizando Ad
 - **Archivo creado:** `buffers.cpp`
 
 **Imagen del código**  
+
 ![Código](images/12.png)
 
 ---
@@ -137,12 +147,15 @@ buffers.cpp -o buffers
 ./buffers
 
 **Imagen de la compilación**  
+
 ![Compilación](images/13.png)
 
 **Imagen de los errores 1**  
+
 ![Errores](images/14.png)
 
 **Imagen de los errores 2**  
+
 ![Errores](images/15.png)
 
 2. Ejecutar con Valgrind:
@@ -150,9 +163,11 @@ valgrind --leak-check=yes --track-origins=yes
 --show-leak-kinds=all ./buffers
 
 **Imagen de la ejecución**  
+
 ![Ejecución Valgrind](images/16.png)  
 
 **Imagen de los errores**  
+
 ![Errores](images/17.png)
 
 3. Registrar los errores detectados y sus causas.
@@ -170,6 +185,7 @@ valgrind --leak-check=yes --track-origins=yes
 4. Corregir el código (agregar espacio adecuado, evitar accesos inválidos y liberar memoria).
 
 **Corrección del código**  
+
 ![Corrección del código](images/18.png) 
 
 
@@ -177,9 +193,11 @@ valgrind --leak-check=yes --track-origins=yes
 
 
 **Salida con ASan**  
+
 ![ejecución sin errores ASan](images/19.png) 
 
 **Salida con Valgrind**  
+
 ![ejecución sin errores Valgrind](images/20.png)
 ---
 
@@ -205,6 +223,7 @@ Analizar un programa con accesos concurrentes a una variable compartida sin sinc
 - **Archivo creado:** `race.cpp`
 
 **Imagen del código**  
+
 ![Código](images/21.png)
 
 
@@ -218,6 +237,7 @@ race -lpthread
 ./race
 
 **Imagen de la compilación 1**  
+
 ![Compilación ThreadSanitizer](images/27.png) 
 
 
@@ -225,23 +245,29 @@ race -lpthread
 valgrind --tool=helgrind ./race
 
 **Imagen de la ejecución**  
+
 ![Ejecución Helgrind](images/27.png)  
 
 3. Registrar el diagnóstico de ambas herramientas.
 
 **Diagnóstico de errores con ThreadSanitizer 1:**  
+
 ![Diagnóstico con ThreadSanitizer](images/22.png) 
 
 **Diagnóstico de errores con ThreadSanitizer 2:**  
+
 ![Diagnóstico con ThreadSanitizer](images/23.png) 
 
 **Diagnóstico de errores con Helgrind 1:**  
+
 ![Diagnóstico con Helgrind](images/24.png)
 
 **Diagnóstico de errores con Helgrind 2:**  
+
 ![Diagnóstico con Helgrind](images/25.png)
 
 **Diagnóstico de errores con Helgrind 3:**  
+
 ![Diagnóstico con Helgrind](images/26.png)
 
 **Diagnóstico de errores:**
@@ -264,10 +290,12 @@ valgrind --tool=helgrind ./race
 
 4. Corregir el código usando std::mutex o std::atomic<int>.
 
-**Corrección del código**  
+**Corrección del código**
+
 ![Corrección del código](images/28.png) 
 
-**Imagen de salida**  
+**Imagen de salida**
+
 ![ejecución sin errores](images/29.png)
 
 ---
@@ -297,38 +325,47 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 
 - **Archivo creado:** `Makefile`
 
-**Imagen del Makefile 1**  
+**Imagen del Makefile 1**
+
 ![Código](images/32.png)
 
-**Imagen del Makefile 2**  
+**Imagen del Makefile 2**
+
 ![Código](images/33.png)
 
-**Imagen del Makefile 3**  
+**Imagen del Makefile 3**
+
 ![Código](images/34.png)
 
-**Imagen de la ejecución con make**  
+**Imagen de la ejecución con make 1**
+
+
 ![ejecución sin errores](images/30.png)
 
-**Imagen de la ejecución con make**  
+**Imagen de la ejecución con make 2**  
+
 ![ejecución sin errores](images/31.png)
 ---
 ### Fase 5:  Análisis conceptual y reflexivo
 
-**APreguntas de análisis:**  
+**Preguntas de análisis:**  
 1. ¿Qué diferencias existen entre un error de ejecución y un error lógico?
-- 
+- **Error de ejecución:** Se identifica porque el programa **se cae o lanza excepción** al correr (ej. `std::out_of_range`, `segfault`, *use-after-free*). 
+- **Error lógico:** Se identifica porque el programa **no se cae**, pero **da un resultado incorrecto**. Y se necesitan pruebas y depuración para descubrirlo.
 
 2. ¿Qué ventajas presenta AddressSanitizer frente a Valgrind?
-- 
+- **ASan** normalmente es **más rápido** y tiene **mejor integración** con el compilador. Ideal para detectar **overflows**, **use-after-free** y accesos inválidos.  
+- **Valgrind/Memcheck** no requiere recompilar, pero es **más lento**. Sirve para cuando no se puede cambiar flags de compilación o se necesita una segunda verificación estática.
 
 3. ¿Cómo afectan las herramientas de depuración el rendimiento del programa?
-- 
+- Introducen **sobrecarga**: ASan/TSan se encargan de añadir instrumentación, Valgrind/Helgrind es el que emula y rastrea accesos, lo que **multiplica el tiempo de ejecución**. Es normal que los binarios “con sanitizers” o que corren con Valgrind sean **más lentos** que los normales.
 
 4. ¿Por qué se recomienda compilar con -O0 durante la depuración?
-- 
+- Con `-O0` el compilador **no reordena ni elimina** código, por lo que los **breakpoints** y las variables en gdb/LLDB son **más predecibles**. Facilita seguir el flujo real y examinar valores locales sin que “desaparezcan” por optimización.
 
 5. ¿Qué aprendiste sobre la importancia de diagnosticar errores antes de liberar un programa?
-- 
+- Varias cosas como que muchos fallos como condiciones de carrera, fugas y accesos inválidos **no son evidentes** en ejecuciones que son más pequeñas. Entoncees al usar pruebas + sanitizers + Valgrind/Helgrind + gdb se reduce el **riesgo**, **tiempo de soporte** y **costos**, y se mejora la **calidad** del software.
+
 
 ---
 
@@ -338,7 +375,7 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 
 - Para la parte de docker utilicé este.
 
-![Dockerfile](images/21.png)  
+![Dockerfile](images/.png)  
 
 - **Comandos**
 
