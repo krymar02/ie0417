@@ -265,23 +265,27 @@ valgrind --tool=helgrind ./race
 4. Corregir el código usando std::mutex o std::atomic<int>.
 
 **Corrección del código**  
-![Corrección del código](images/2.png) 
+![Corrección del código](images/28.png) 
 
 **Imagen de salida**  
-![ejecución sin errores Valgrind](images/3.png)
+![ejecución sin errores](images/29.png)
 
 ---
 
 ### Preguntas y desarrollo
 
 1. ¿Qué tipo de acceso detecta ThreadSanitizer como data race?
--
+- Detecta un acceso **concurrente** en la **misma dirección de memoria** sin sincronización, donde **al menos uno es escritura**.
 
 2. ¿Por qué Helgrind tiene un mayor costo de ejecución?
--
+- Porque instrumenta y **rastrea exhaustivamente** todos los accesos a memoria y las relaciones de sincronización (**happens-before**), lo cual introduce **mucha sobrecarga** en tiempo de ejecución comparado con la ejecución normal del programa.
 
 3. ¿Qué ventajas tiene usar std::atomic frente a std::mutex?
--
+- Para operaciones simples como un contador:
+     - **Evita bloqueos** (no hay `lock/unlock`).
+     - Es **más rápido** y **más escalable** con varios hilos.
+     - Es **más simple** de usar en incrementos/lecturas.
+   - Mientras que `std::mutex` es mejor cuando se requiere proteger **secciones críticas más grandes** o **múltiples operaciones** que deben ejecutarse de forma atómica en conjunto.
 
 ---
 
