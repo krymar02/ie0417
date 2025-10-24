@@ -1,13 +1,14 @@
 #include <iostream>
 #include <thread>
-#include <vector>
+#include <atomic>
 using namespace std;
 
-int contador = 0;
+atomic<int> contador{0};
 
 void trabajo(int n) {
     for (int i = 0; i < n; ++i) {
-        contador++; // Condición de carrera: RMW sin sincronización
+        // Operación atómica: evita la data race sin necesidad de locks
+        contador.fetch_add(1, memory_order_relaxed); // o simplemente: contador++;
     }
 }
 
@@ -18,6 +19,6 @@ int main() {
     t1.join();
     t2.join();
 
-    cout << "Valor final: " << contador << endl; // Esperado: 2000000 (no se cumple)
+    cout << "Valor final (atomic): " << contador.load() << endl; // 2000000
     return 0;
 }
