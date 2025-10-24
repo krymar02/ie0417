@@ -38,10 +38,10 @@
 **Actividad 1:  Exploración con gdb**  
 - **Instrucción:**  
 Implementar un programa que contenga errores de lógica y de ejecución, y utilizar gdb para analizarlo paso a paso.  
-- **Archivo creado:** `threads_basic.cpp`
+- **Archivo creado:** `suma_vector.cpp`
 
 **Imagen del código**  
-![Código threads_basic](images/2.png)  
+![Código suma_vector](images/2.png)  
 
 ---
 
@@ -50,43 +50,69 @@ Implementar un programa que contenga errores de lógica y de ejecución, y utili
 1. Compilar el programa en modo debug con símbolos de depuración:
 g++ -g -O0 -std=c++17 suma_vector.cpp -o suma_vector
 
-**Imagen de la compilación**  
-![Compilación](images/2.png)  
-
 2. Ejecutar bajo gdb:
 gdb ./suma_vector
 
-**Imagen de la ejecución**  
-![Ejecución](images/2.png)  
+**Imagen de la compilación y ejecución**  
+![Compilación fallida](images/4.png)  
 
 3. Usar los comandos run, next, step, print, bt e info locals para ubicar los errores.
 
 **Busqueda de errores**  
-![Ejecución](images/2.png) 
+![Ejecución](images/5.png) 
+
+- En la depuración en **gdb**, usé `break main` para poner un *breakpoint* al inicio de `main` y que el programa se detuviera ahí, para que avance despacio. Luego usé `catch throw` para que se pare justo cuando se lance una excepción C++, así se puede ver el fallo cuando sucede. Después, con `run` arranqué el programa para poder localizar el problema.  
+
+- Cuando **gdb** se detuvo en `main`, usé `list` para ver el código con números de línea. Busqué la línea con `cout << "Suma calculada..."` y la que tiene `datos.at(4)`. Puse un *breakpoint* en la línea de `datos.at(4)` con `(gdb) break N` y continué la ejecución con `(gdb) continue`.  
+
+- Para inspeccionar las variables antes del fallo, vi los valores usando `print s` (6 en este caso), luego el tamaño del vector con `print datos.size()` y los elementos con `print datos`.  
+
+- Casi al final, usé `(gdb) bt` (*backtrace*) para ver la pila y la línea donde se lanzó la excepción, también `(gdb) info locals` para ver las variables locales del *frame* donde ocurrió el fallo, y `(gdb) print datos.size()` donde se confirma por qué pasa el error.  
+
+- Por último, se muestra que antes `bt` e `info locals` decían "No stack" / "No frame" porque se usaron después de que el programa ya se había terminado. Con `catch throw` activo, **gdb** se detiene justo cuando se lanza la excepción, en ese momento `bt` e `info locals` sí brindan información útil.
+
+**Parte 1 de la ejecución con gdb**  
+![Ejecución 1](images/6.png) 
+
+**Parte 2 de la ejecución con gdb**  
+![Ejecución 2](images/7.png) 
+
+**Parte 3 de la ejecución con gdb**  
+![Ejecución 3](images/8.png) 
+
+**Parte 4 de la ejecución con gdb**  
+![Ejecución 4](images/9.png) 
+
 
 
 4. Explicar las causas del error de ejecución y el error lógico.
 
+- **Error lógico:** La función `suma` tenía un bucle `for` con la condición `i < v.size() - 1`, con eso se ignoraba el último elemento del vector. Entonces cuando se hacia la suma daba 6 en lugar de 10.
+
+- **Error de ejecución:** Se intentaba acceder a `datos.at(4)` en un vector de tamaño 4, ahi se generó una excepción `std::out_of_range` porque el índice 4 no existe como pudimos observar. Entonces el programa se veia obligado a detenerse de manera incorrecta.
 
 5. Corregir ambos errores y validar la salida correcta (suma = 10).
 
+- Se realizó la corrección del c ódigo, lo que da una salida correcta.
+
 **Corrección del código**  
-![Corrección del código](images/2.png) 
+![Corrección del código](images/10.png) 
 
 **Imagen de salida**  
-![Salida del programa](images/3.png)
+![Salida del programa](images/11.png)
 ---
 
 ### Preguntas y desarrollo
 
 1. ¿Qué tipo de error genera el fallo de ejecución?
-- 
+- Se genera una excepción std::out_of_range por intentar acceder a un índice inválido del vector.
 
 2. ¿Qué comando permite identificar la línea exacta donde ocurre el fallo?
--
+-`bt` (backtrace) en gdb, que muestra la pila y la línea donde se lanza la excepción.
 
 3. ¿Qué diferencia existe entre los comandos next y step en gdb?
-- 
+- `next` es el que ejecuta la siguiente línea de código pero sin entrar en funciones llamadas. 
+- mientras que `step` ejecuta la siguiente línea de código y entra en cualquier función llamada en esa línea.
 
 ---
 
