@@ -1,0 +1,20 @@
+# Git y editor
+.git
+.vscode
+.vscode-server
+*.swp
+
+# Python/venvs
+venv/
+__pycache__/
+*.pyc
+
+# Binarios generados
+files/suma_vector
+files/buffers_plain
+files/buffers_asan
+files/race_plain
+files/race_tsan
+
+# Otros
+.DS_Store

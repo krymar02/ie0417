@@ -375,7 +375,13 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 
 - Para la parte de docker utilicé este.
 
-![Dockerfile](images/.png)  
+- Dockerfile:
+
+![Dockerfile](images/35.png)  
+
+- .dockerignore:
+
+![Dockerfile](images/36.png)  
 
 - **Comandos**
 
@@ -388,4 +394,6 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 
   ```
 
-- **Resultados**  
+- **Resultados**
+
+![Dockerfile salida](images/37.png)
