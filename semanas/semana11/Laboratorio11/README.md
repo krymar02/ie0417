@@ -122,10 +122,10 @@ gdb ./suma_vector
 - **Instrucción:**  
 Analizar un programa con errores de asignación y fugas de memoria utilizando AddressSanitizer (ASan) y Valgrind/Memcheck.
 
-- **Archivo creado:** `contador_compartido.cpp`
+- **Archivo creado:** `buffers.cpp`
 
 **Imagen del código**  
-![Código](images/4.png)
+![Código](images/12.png)
 
 ---
 
@@ -137,26 +137,41 @@ buffers.cpp -o buffers
 ./buffers
 
 **Imagen de la compilación**  
-![Compilación](images/2.png)  
+![Compilación](images/13.png)
+
+**Imagen de los errores 1**  
+![Errores](images/14.png)
+
+**Imagen de los errores 2**  
+![Errores](images/15.png)
 
 2. Ejecutar con Valgrind:
 valgrind --leak-check=yes --track-origins=yes
 --show-leak-kinds=all ./buffers
 
 **Imagen de la ejecución**  
-![Ejecución Valgrind](images/2.png)  
+![Ejecución Valgrind](images/16.png)  
+
+**Imagen de los errores**  
+![Errores](images/17.png)
 
 3. Registrar los errores detectados y sus causas.
-- 
+**ASan y Valgrind:**
 
-**Busqueda de errores**  
-![Ejecución](images/2.png) 
+- **Heap-buffer-overflow (ASan y Valgrind):** `copiar()` hacía `malloc(n)` y luego `memcpy(buf, src, n+1)`. La copia de `n+1` bytes sobreescribía el byte siguiente al bloque asignado (falta reservar espacio para el terminador '\0').
 
+- **Use-after-free (Valgrind):** en `main` se llamó `free(a)` y luego se usó `a` con `cout`, provocando lecturas inválidas en memoria ya liberada.
+
+- **Memory leak (Valgrind):** `malloc(128)` en `main` no se liberó (habia una fuga de 128 bytes reportada como "definitely lost").
+
+- Entones, se debe reservar `n+1` bytes para el buffer, no usar punteros tras `free` (asignar `nullptr`) y liberar toda memoria asignada con `free`.
+ 
 
 4. Corregir el código (agregar espacio adecuado, evitar accesos inválidos y liberar memoria).
 
 **Corrección del código**  
-![Corrección del código](images/2.png) 
+![Corrección del código](images/18.png) 
+
 
 5. Validar la ejecución sin errores en ASan y Valgrind.
 

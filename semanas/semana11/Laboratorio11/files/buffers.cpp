@@ -1,13 +1,17 @@
 #include <iostream>
-#include <cstdlib>   
-#include <cstring>   
+#include <cstdlib>
+#include <cstring>
 using namespace std;
 
 char* copiar(const char* src) {
     size_t n = strlen(src);
-    // Error intencional: no reservar espacio para '\0' (debería ser n+1)
-    char* buf = (char*) malloc(n);
-    // Error intencional: copia n+1 bytes en un buffer de n bytes -> overflow
+    // reservar espacio para el terminador
+    char* buf = (char*) malloc(n + 1);
+    if (!buf) {
+        cerr << "malloc failed\n";
+        exit(1);
+    }
+    // copia segura, ahora buf tiene n+1 bytes
     memcpy(buf, src, n + 1);
     return buf;
 }
@@ -18,14 +22,18 @@ int main() {
     cout << a << endl;
 
     free(a);
-    // Use-after-free intencional: acceso posterior a memoria liberada
-    cout << "Acceso posterior a free: " << a << endl;
+    a = nullptr; // evitar use-after-free accidental
 
-    // Fuga intencional: memoria asignada y no liberada
+    // asignación temporal (si se necesita) -> liberar después
     char* leak = (char*) malloc(128);
+    if (!leak) {
+        cerr << "malloc failed\n";
+        return 1;
+    }
     strcpy(leak, "leak detectado");
+    cout << leak << endl;
+    free(leak); // liberar para evitar fuga
 
-    // Mostrar algo para que el programa haga trabajo
-    cout << "Fin del programa (puede haber fugas)" << endl;
+    cout << "Fin del programa (sin fugas ni errores)" << endl;
     return 0;
 }
