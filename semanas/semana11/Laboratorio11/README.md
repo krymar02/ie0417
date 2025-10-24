@@ -176,23 +176,24 @@ valgrind --leak-check=yes --track-origins=yes
 5. Validar la ejecución sin errores en ASan y Valgrind.
 
 
-**Corrección del código**  
-![ejecución sin errores ASan](images/2.png) 
+**Salida con ASan**  
+![ejecución sin errores ASan](images/19.png) 
 
-**Imagen de salida**  
-![ejecución sin errores Valgrind](images/3.png)
+**Salida con Valgrind**  
+![ejecución sin errores Valgrind](images/20.png)
 ---
 
 ### Preguntas y desarrollo
 
 1. ¿Qué tipo de error detectó AddressSanitizer primero?
-- 
+- Detectó un **heap-buffer-overflow**, ya que se estaba copiando `n+1` bytes, incluyendo el carácter `'\0'` a un buffer que solo tenía `n` bytes reservados con `malloc(n)`.
+
 
 2. ¿Cuál fue la causa de la fuga de memoria?
--
+- Lo que sucedió fué que se reservó memoria con `malloc(128)` para la variable `leak`, pero **nunca se liberó** con `free(leak)` antes de finalizar el programa, por lo que Valgrind lo reportó como **definitely lost**.
 
 3. ¿Por qué es importante compilar con la opción -g?
-- 
+- Porque añade **símbolos de depuración** al ejecutable, lo que permite que herramientas como AddressSanitizer, Valgrind y gdb muestren la **línea exacta** donde ocurre el error y un **backtrace comprensible**, que facilita encontrar el problema.  
 
 ---
 ### Fase 3:  Análisis de concurrencia
