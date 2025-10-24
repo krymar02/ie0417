@@ -370,6 +370,7 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 ---
 
 ## Ejecución con Docker
+- Se realizó la ejecución con Docker, funcionó correctamente, solo TSan necesita desactivar ASLR para funcione de mejor manera pero en general se ejecutó correctamente.
 
 **Imagen del código Docker**
 
@@ -377,11 +378,11 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 
 - Dockerfile:
 
-![Dockerfile](images/35.png)  
+![Dockerfile](images/38.png)  
 
 - .dockerignore:
 
-![Dockerfile](images/36.png)  
+![Dockerfile](images/37.png)  
 
 - **Comandos**
 
@@ -396,4 +397,4 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 
 - **Resultados**
 
-![Dockerfile salida](images/37.png)
+![Dockerfile salida](images/.png)
