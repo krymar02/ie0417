@@ -297,10 +297,20 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 
 - **Archivo creado:** `Makefile`
 
-**Imagen del código**  
-![Código](images/4.png)
+**Imagen del Makefile 1**  
+![Código](images/32.png)
 
+**Imagen del Makefile 2**  
+![Código](images/33.png)
 
+**Imagen del Makefile 3**  
+![Código](images/34.png)
+
+**Imagen de la ejecución con make**  
+![ejecución sin errores](images/30.png)
+
+**Imagen de la ejecución con make**  
+![ejecución sin errores](images/31.png)
 ---
 ### Fase 5:  Análisis conceptual y reflexivo
 
