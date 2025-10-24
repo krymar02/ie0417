@@ -397,4 +397,18 @@ Crear un Makefile que automatice la compilación y ejecución con los diferentes
 
 - **Resultados**
 
-![Dockerfile salida](images/.png)
+- Salida 1:
+
+![Dockerfile salida](images/39.png)
+
+- Salida 2:
+
+![Dockerfile salida](images/40.png)
+
+- Salida 3:
+
+![Dockerfile salida](images/41.png)
+
+- Salida 4:
+
+![Dockerfile salida](images/42.png)
