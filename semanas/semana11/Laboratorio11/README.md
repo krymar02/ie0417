@@ -108,7 +108,7 @@ gdb ./suma_vector
 - Se genera una excepción std::out_of_range por intentar acceder a un índice inválido del vector.
 
 2. ¿Qué comando permite identificar la línea exacta donde ocurre el fallo?
--`bt` (backtrace) en gdb, que muestra la pila y la línea donde se lanza la excepción.
+- `bt` (backtrace) en gdb, que muestra la pila y la línea donde se lanza la excepción.
 
 3. ¿Qué diferencia existe entre los comandos next y step en gdb?
 - `next` es el que ejecuta la siguiente línea de código pero sin entrar en funciones llamadas. 
