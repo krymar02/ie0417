@@ -5,172 +5,150 @@
 
 ---
 
-# Depuración
+# Depuración, gdb y valgrind
 
-La depuración es el proceso de identificar y eliminar errores o fallos en un programa de software. Es una etapa crucial en el ciclo de desarrollo que asegura que el código funcione correctamente y cumpla con los requisitos especificados.
+## 1. Depuración
 
-Depurar implica:
+La depuración es el proceso de identificar, comprender y eliminar errores o fallos en un programa de software. Garantiza que el código funcione correctamente y cumpla los requisitos establecidos.
 
-Encontrar los errores.
+### Importancia
+- Garantía de calidad: minimiza fallos en el producto final.
+- Mantenimiento del código: mejora legibilidad, modularidad y documentación.
+- Eficiencia del desarrollo: detectar errores temprano reduce costos y tiempo.
+- Experiencia del usuario: evita fallos y comportamientos inesperados.
 
-Comprender por qué ocurrieron.
+---
 
-Solucionarlos de forma efectiva.
+## 2. Tipos de errores
 
-## ¿Por qué es importante?
+| Tipo de error | Momento en que ocurre | Ejemplos | Detección |
+|--------------|----------------------|----------|-----------|
+| Errores de sintaxis | Antes de ejecutar | Falta de punto y coma, paréntesis incorrectos | Detectados por el compilador |
+| Errores de ejecución | Durante la ejecución | División por cero, puntero nulo | El programa se detiene inesperadamente |
+| Errores lógicos | Programa ejecuta pero con resultados incorrectos | Algoritmo mal diseñado, bucle infinito | Mediante pruebas y análisis |
 
-### Garantía de calidad
-Asegura que el software funcione bien en distintas condiciones.  
-Reduce fallos y errores en el producto final.
+Los errores lógicos son difíciles de detectar porque el programa no falla, pero no hace lo correcto.
 
-### Mantenimiento del código
-Se mejora la legibilidad y documentación.  
-Se facilita la modularidad y futuras actualizaciones.
+---
 
-### Eficiencia del desarrollo
-Detectar errores temprano ahorra tiempo y dinero.  
-Reduce errores después del lanzamiento.
+## 3. Conceptos esenciales
 
-## Tipos de errores
+### Breakpoints (Puntos de interrupción)
+Pausan la ejecución del programa en una línea específica para inspeccionar el estado del sistema.
 
-### Errores de sintaxis
-Violaciones de las reglas del lenguaje. Detectados por el compilador o intérprete.
-
-Ejemplos:
-- Falta de ;
-- Paréntesis mal colocados
-
-### Errores de tiempo de ejecución
-Ocurren durante la ejecución por datos o acciones inválidas.
-
-Ejemplos:
-- División por cero
-- Acceso a índices fuera de rango
-- Punterros nulos
-
-### Errores lógicos
-El programa corre, pero con resultados incorrectos. Son los más difíciles de detectar.
-
-Ejemplos:
-- Algoritmos incorrectos
-- Bucle infinito
-
-## Conceptos básicos de depuración
-
-### Puntos de interrupción (Breakpoints)
-Marcas que pausan la ejecución en una línea para diagnosticar el estado del programa.
-
-### Paso a paso (Stepping)
-Step over: Avanza sin entrar en funciones.  
-Step into: Entra en funciones llamadas en la línea actual.  
-Step out: Sale de la función actual hasta la siguiente ejecución externa.
+### Stepping
+- Step over (next): avanza sin entrar en funciones
+- Step into (step): entra en las funciones llamadas
+- Step out (finish): sale de la función actual
 
 ### Inspección de variables
-Permite ver/modificar valores en tiempo real dentro del depurador.
+Permite observar o modificar los valores de variables en tiempo de ejecución.
 
 ### Call Stack (Pila de llamadas)
-Permite revisar la secuencia de funciones ejecutadas y entender el flujo del programa.
+Muestra la secuencia de funciones llamadas hasta la línea actual. La parte superior es la función activa.
 
-## gdb — GNU Debugger
+---
 
-Documentación: https://sourceware.org/gdb/documentation/
+## 4. gdb (GNU Debugger)
 
-Herramienta de depuración para C/C++ que permite inspeccionar el comportamiento interno del programa.
+Herramienta para depurar programas escritos en C, C++ y otros lenguajes.
 
-### Características principales
-Control de ejecución  
-Inspección y modificación de variables  
-Navegación en la pila de llamadas  
-Establecer breakpoints  
-Ejecución paso a paso (tracing)
+### Características
+- Pausar y reanudar la ejecución
+- Visualizar y modificar variables
+- Navegar la pila de llamadas
+- Establecer breakpoints
+- Análisis paso a paso
 
-## Comandos básicos de gdb
+### Compilación con símbolos de depuración
+```bash
+g++ -g -o programa programa.cpp
+```
 
-Comando | Descripción | Ejemplo
-------- | ----------- | -------
-run | Ejecuta el programa | (gdb) run
-break | Establece un breakpoint en línea o función | (gdb) break main.cpp:10
-next | Ejecuta la siguiente línea (sin entrar a funciones) | (gdb) next
-step | Avanza entrando en funciones | (gdb) step
-continue | Reanuda ejecución | (gdb) continue
-print | Muestra valor de variable | (gdb) print x
-backtrace | Muestra la pila de llamadas | (gdb) backtrace
+### Ejecución con gdb
+```
+gdb programa
+(gdb) run
 
-### Ejemplo de uso
+```
+### Comandos más utilizados
+
+| Comando | Función | Ejemplo |
+|--------|---------|---------|
+| run | Inicia ejecución del programa | run |
+| break | Establece un punto de interrupción | break main.cpp:10 |
+| next | Paso sin entrar a función | next |
+| step | Paso entrando a función | step |
+| continue | Reanuda hasta siguiente breakpoint | continue |
+| print | Mostrar variable | print x |
+| backtrace | Mostrar pila de llamadas | backtrace |
+
+---
+
+### 5. Análisis de memoria
+
+#### Valgrind
+Marco de herramientas para:
+- Encontrar pérdidas de memoria
+- Detectar accesos inválidos a memoria
+- Detectar memoria no inicializada
+- Analizar concurrencia
+
+Ejecución:
 g++ -g -o programa programa.cpp  
-gdb programa  
-(gdb) run  
-(gdb) break funcion1  
-(gdb) continue  
-(gdb) next  
-(gdb) print a  
-(gdb) step  
-(gdb) backtrace  
-(gdb) continue  
+valgrind --leak-check=yes ./programa
 
-## Análisis de memoria
-
-### Valgrind
-Framework para análisis de memoria y concurrencia.
-
-Detecta:
-- Leaks (fugas de memoria)
-- Accesos inválidos
-- Uso de memoria no inicializada
-- Errores en programas multihilo
-
-Ejemplo de uso:  
-g++ -g -o programa programa.cpp  
-valgrind --leak-check=yes ./programa  
-
-### Memcheck
-Herramienta principal de Valgrind para errores de memoria.
-
+#### Memcheck
 Detecta:
 - Lecturas/escrituras fuera de límites
-- Memoria no inicializada
-- Doble liberación free()
-- Fugas de memoria
+- Doble liberación de memoria
+- Memoria dinámica no liberada
 
-## Sanitizers
-Herramientas del compilador para detectar errores en tiempo de ejecución.
+---
 
-### AddressSanitizer (ASan)
+### 6. Sanitizers
+
+Herramientas del compilador que agregan verificaciones automáticas.
+
+#### AddressSanitizer (ASan)
 Detecta:
 - heap-buffer-overflow
 - use-after-free
-- Acceso a memoria no inicializada
+- accesos ilegales
 
-Compilación:  
 g++ -fsanitize=address -g -o programa programa.cpp  
-./programa  
+./programa
 
-Incluye un shadow memory para validar accesos.
-
-### ThreadSanitizer (TSan)
-Detecta problemas de concurrencia como Race conditions (data race)
-
-Compilación:
-g++ -fsanitize=thread -g -o programa programa.cpp  
-./programa  
-
-## Análisis de hilos
-
-### Helgrind (Valgrind)
+#### ThreadSanitizer (TSan)
 Detecta:
 - Condiciones de carrera
-- Bloqueos
-- Mal manejo de sincronización
+- Problemas de sincronización en hilos
 
-Ejemplo de uso:
-g++ -g -o programa programa.cpp  
-valgrind --tool=helgrind ./programa  
+g++ -fsanitize=thread -g -o programa programa.cpp  
+./programa
 
-## Conclusión
+---
 
-Estas herramientas permiten:  
-Mejor desempeño  
-Mayor calidad  
-Software más seguro y estable  
+### 7. Análisis de hilos
 
-Depurar es una parte esencial del desarrollo profesional.
+#### Helgrind (Valgrind)
+Detecta:
+- Condiciones de carrera
+- Deadlocks
+- Errores de concurrencia
+
+valgrind --tool=helgrind ./programa
+
+---
+
+### Conclusión
+
+La depuración es fundamental para asegurar:
+- Correcto funcionamiento del software
+- Buena calidad del código
+- Eficiencia en el desarrollo
+- Estabilidad y seguridad del programa
+
+Herramientas clave:
+- gdb: ejecución y lógica del programa
+- Valgrind y Sanitizers: errores de memoria y concurrencia
