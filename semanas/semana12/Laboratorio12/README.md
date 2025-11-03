@@ -155,7 +155,7 @@ make
 
 - Salida:
 
-![Actions](Imagenes/lista.png)
+![Actions](Imagenes/listo.png)
 
 ## Análisis y conclusiones
 
