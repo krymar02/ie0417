@@ -1,0 +1,4 @@
+/home/krymar02/ie0417/semanas/semana12/Laboratorio12/build/CMakeFiles/test_calculator.dir
+/home/krymar02/ie0417/semanas/semana12/Laboratorio12/build/CMakeFiles/test.dir
+/home/krymar02/ie0417/semanas/semana12/Laboratorio12/build/CMakeFiles/edit_cache.dir
+/home/krymar02/ie0417/semanas/semana12/Laboratorio12/build/CMakeFiles/rebuild_cache.dir
