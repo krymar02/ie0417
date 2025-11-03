@@ -23,14 +23,11 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake build-essential libgtest-dev
-          cd /usr/src/googletest || cd /usr/src/gtest
-          sudo cmake .
-          sudo make
-          sudo cp lib/*.a /usr/lib
 
       - name: Configure CMake
         run: |
-          mkdir -p build
+          rm -rf build
+          mkdir build
           cd build
           cmake ..
 
@@ -43,16 +40,3 @@ jobs:
         run: |
           cd build
           ctest --output-on-failure
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Deploy to production
-        run: |
-          echo "Aquí irían tus comandos de despliegue (ssh, docker, etc)."
